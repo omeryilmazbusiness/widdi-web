@@ -32,9 +32,6 @@ const nextConfig: NextConfig = {
     root: __dirname,
   },
 
-  // Set metadataBase for social media previews
-  metadataBase: new URL('https://widdigroup.com'),
-
   // Headers for Security & Performance
   async headers() {
     return [
