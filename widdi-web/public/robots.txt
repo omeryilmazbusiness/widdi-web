@@ -1,9 +1,11 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
 
 # Host
-Host: https://widdi.com
+Host: https://widdigroup.com
 
-# Sitemaps
-Sitemap: https://widdi.com/sitemap.xml
+# Sitemap
+Sitemap: https://widdigroup.com/sitemap.xml

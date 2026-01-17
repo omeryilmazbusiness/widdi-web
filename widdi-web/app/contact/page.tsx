@@ -36,7 +36,7 @@ export default function Contact() {
   const contactMethods = [
     {
       title: 'Enterprise Email',
-      value: 'enterprise@widdi.com',
+      value: 'enterprise@widdigroup.com',
       description: '24/7 Support Available',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
@@ -46,7 +46,7 @@ export default function Contact() {
     },
     {
       title: 'Sales Inquiries',
-      value: 'sales@widdi.com',
+      value: 'sales@widdigroup.com',
       description: 'Business Development Team',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
@@ -67,7 +67,7 @@ export default function Contact() {
     },
     {
       title: 'Technical Support',
-      value: 'support@widdi.com',
+      value: 'support@widdigroup.com',
       description: 'Infrastructure & Integration',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>

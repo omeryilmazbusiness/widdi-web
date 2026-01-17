@@ -292,7 +292,7 @@ npm start
 
 ### Google Search Console Setup
 1. Verify your domain
-2. Submit sitemap: `https://widdi.com/sitemap.xml`
+2. Submit sitemap: `https://widdigroup.com/sitemap.xml`
 3. Monitor Core Web Vitals
 4. Check structured data validity
 

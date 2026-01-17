@@ -296,7 +296,7 @@ export default function Services() {
               </motion.button>
             </Link>
             
-            <a href="mailto:enterprise@widdi.com">
+            <a href="mailto:enterprise@widdigroup.com">
               <motion.button
                 initial={false}
                 whileHover={{ scale: 1.03 }}

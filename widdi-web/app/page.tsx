@@ -544,7 +544,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-base font-semibold text-white mb-0.5">Enterprise Email</h3>
-                      <p className="text-sm text-gray-400">enterprise@widdi.com</p>
+                      <p className="text-sm text-gray-400">enterprise@widdigroup.com</p>
                       <p className="text-xs text-gray-500 mt-1">24/7 Support</p>
                     </div>
                   </div>

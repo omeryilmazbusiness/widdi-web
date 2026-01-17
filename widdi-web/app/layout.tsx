@@ -21,6 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: "Widdi - Enterprise AI-Powered Software Solutions",
   description: "Leading provider of AI-powered SaaS platforms and high-volume system management solutions. Trusted by 500+ enterprise clients worldwide. 99.99% uptime SLA, ISO 27001 & SOC 2 certified.",
   keywords: [
@@ -47,8 +48,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://widdi.com",
+    locale: "tr_TR",
+    url: "https://widdigroup.com",
     title: "Widdi - Enterprise AI-Powered Software Solutions",
     description: "Leading provider of AI-powered SaaS platforms and high-volume system management solutions. Trusted by 500+ enterprise clients worldwide.",
     siteName: "Widdi",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Widdi - Enterprise AI-Powered Software Solutions",
     description: "Leading provider of AI-powered SaaS platforms and high-volume system management solutions.",
-    creator: "@widdi",
+    creator: "@widdigroup",
     images: ['/widdi-logo.png'],
   },
   robots: {
@@ -82,6 +83,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 // JSON-LD Structured Data
@@ -89,13 +93,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Widdi',
-  url: 'https://widdi.com',
-  logo: 'https://widdi.com/logo.png',
+  url: 'https://widdigroup.com',
+  logo: 'https://widdigroup.com/logo.png',
   description: 'Leading provider of AI-powered SaaS platforms and high-volume system management solutions',
   foundingDate: '2020',
   contactPoint: {
     '@type': 'ContactPoint',
-    email: 'enterprise@widdi.com',
+    email: 'enterprise@widdigroup.com',
     contactType: 'Customer Service',
     availableLanguage: ['en', 'tr'],
   },

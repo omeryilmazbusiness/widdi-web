@@ -19,7 +19,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           provider: {
             '@type': 'Organization',
             name: 'Widdi',
-            url: 'https://widdi.com',
+            url: 'https://widdigroup.com',
           },
           areaServed: 'Worldwide',
           serviceType: data.serviceType,
@@ -61,7 +61,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             name: 'Widdi',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://widdi.com/logo.png',
+              url: 'https://widdigroup.com/logo.png',
             },
           },
           datePublished: data.datePublished,
