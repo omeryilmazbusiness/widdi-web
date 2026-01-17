@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://widdi.com
+
+# Sitemaps
+Sitemap: https://widdi.com/sitemap.xml

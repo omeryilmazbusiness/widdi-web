@@ -1,0 +1,1 @@
+# Favicon will be automatically generated from /public/widdi-logo.png by Next.js
