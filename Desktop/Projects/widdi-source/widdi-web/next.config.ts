@@ -27,6 +27,14 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['framer-motion', 'three', '@react-three/fiber', '@react-three/drei'],
   },
 
+  // Define the root directory for Turbopack
+  turbopack: {
+    root: __dirname,
+  },
+
+  // Set metadataBase for social media previews
+  metadataBase: new URL('https://your-domain.com'),
+
   // Headers for Security & Performance
   async headers() {
     return [
