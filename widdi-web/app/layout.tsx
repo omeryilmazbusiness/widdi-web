@@ -37,6 +37,31 @@ export const metadata: Metadata = {
   authors: [{ name: "Widdi" }],
   creator: "Widdi",
   publisher: "Widdi",
+  // Mobile viewport optimization
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+    viewportFit: 'cover', // iOS safe area support
+  },
+  // Theme color for mobile browsers
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#000000' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
+  ],
+  // Apple mobile web app configuration
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Widdi',
+  },
+  // Format detection (prevent iOS from auto-detecting phone numbers, etc.)
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
   icons: {
     icon: [
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },

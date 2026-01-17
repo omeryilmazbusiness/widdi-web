@@ -4,15 +4,17 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
 
-  // Image Optimization
+  // Image Optimization - Mobile Enhanced
   images: {
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    deviceSizes: [375, 640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Mobile optimization: reduce quality for smaller devices
+    loader: 'default',
   },
 
   // Compression
@@ -25,6 +27,9 @@ const nextConfig: NextConfig = {
   // Experimental Features for Better Performance
   experimental: {
     optimizePackageImports: ['framer-motion', 'three', '@react-three/fiber', '@react-three/drei'],
+    // Enable experimental features for better mobile performance
+    optimizeCss: true,
+    scrollRestoration: true,
   },
 
   // Define the root directory for Turbopack
@@ -65,6 +70,11 @@ const nextConfig: NextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()'
+          },
+          // Mobile performance headers
+          {
+            key: 'Link',
+            value: '</fonts/geist-sans.woff2>; rel=preload; as=font; type=font/woff2; crossorigin=anonymous'
           }
         ]
       },
@@ -83,6 +93,16 @@ const nextConfig: NextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      // Optimize image caching for mobile
+      {
+        source: '/textures/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate=604800'
           }
         ]
       }

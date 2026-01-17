@@ -38,6 +38,18 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentSection, setCurrentSection] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile viewport
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const services = [
     {
@@ -113,15 +125,29 @@ export default function Home() {
     if (!container) return;
 
     const handleScroll = () => {
-      const scrollLeft = container.scrollLeft;
-      const sectionWidth = container.offsetWidth;
-      const section = Math.round(scrollLeft / sectionWidth);
-      setCurrentSection(section);
+      if (isMobile) {
+        // Vertical scroll detection for mobile
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const section = Math.round(scrollTop / windowHeight);
+        setCurrentSection(section);
+      } else {
+        // Horizontal scroll detection for desktop
+        const scrollLeft = container.scrollLeft;
+        const sectionWidth = container.offsetWidth;
+        const section = Math.round(scrollLeft / sectionWidth);
+        setCurrentSection(section);
+      }
     };
 
-    container.addEventListener('scroll', handleScroll);
-    return () => container.removeEventListener('scroll', handleScroll);
-  }, []);
+    if (isMobile) {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    } else {
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }
+  }, [isMobile]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -143,14 +169,14 @@ export default function Home() {
       />
       
       <div className="relative">
-        {/* Scroll Indicator - Dark theme */}
-        <div className="hidden md:flex fixed top-24 right-6 z-50 flex-col gap-3">
+        {/* Scroll Indicator - Desktop Only */}
+        <div className="hidden lg:flex fixed top-24 right-6 z-50 flex-col gap-3">
           {['Home', 'Solutions', 'Capabilities', 'Contact'].map((name, index) => (
             <button
               key={name}
               onClick={() => {
                 const container = containerRef.current;
-                if (container) {
+                if (container && !isMobile) {
                   container.scrollTo({
                     left: index * container.offsetWidth,
                     behavior: 'smooth'
@@ -171,31 +197,48 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Horizontal Scroll Container */}
+        {/* Container: Horizontal (Desktop) / Vertical (Mobile) */}
         <div 
           ref={containerRef}
-          className="flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory h-screen scroll-smooth [&::-webkit-scrollbar]:hidden"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          className={`
+            ${isMobile 
+              ? 'block' 
+              : 'flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory h-screen scroll-smooth [&::-webkit-scrollbar]:hidden'
+            }
+          `}
+          style={!isMobile ? { scrollbarWidth: 'none', msOverflowStyle: 'none' } : {}}
         >
-          {/* Section 1: Home/Hero - Black Theme with Earth */}
-          <section className="min-w-full h-screen snap-start snap-always shrink-0 relative flex items-center justify-center overflow-hidden bg-black">
-            {/* 3D Earth Background with Loader */}
-            <div className="absolute inset-0 z-0">
-              <div className="absolute inset-0 opacity-80">
-                {isLoaded ? (
-                  <Suspense fallback={<Hero3DLoader />}>
-                    <Hero3D />
-                  </Suspense>
-                ) : (
-                  <Hero3DLoader />
-                )}
+          {/* Section 1: Hero - Mobile Optimized */}
+          <section className={`${isMobile ? 'min-h-screen' : 'min-w-full h-screen snap-start snap-always shrink-0'} relative flex items-center justify-center overflow-hidden bg-black`}>
+            {/* 3D Earth - Desktop Only */}
+            {!isMobile && (
+              <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 opacity-80">
+                  {isLoaded ? (
+                    <Suspense fallback={<Hero3DLoader />}>
+                      <Hero3D />
+                    </Suspense>
+                  ) : (
+                    <Hero3DLoader />
+                  )}
+                </div>
+                <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-black/60" />
               </div>
-              <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-black/60" />
-            </div>
+            )}
+
+            {/* Mobile Gradient Background */}
+            {isMobile && (
+              <div className="absolute inset-0 z-0 bg-linear-to-br from-gray-900 via-black to-gray-900">
+                <div className="absolute inset-0 opacity-30">
+                  <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.3),transparent_50%)]" />
+                  <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.3),transparent_50%)]" />
+                </div>
+              </div>
+            )}
             
             {/* Content Container */}
-            <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 flex flex-col items-center justify-center min-h-screen">
-              <div className="text-center space-y-8 max-w-5xl">
+            <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-20 md:py-16 flex flex-col items-center justify-center min-h-screen">
+              <div className="text-center space-y-6 md:space-y-8 max-w-5xl">
                 {/* Badge */}
                 <motion.div
                   initial={false}
@@ -203,35 +246,35 @@ export default function Home() {
                   transition={{ duration: 0.6 }}
                   className="mb-2"
                 >
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-xs font-semibold tracking-wider backdrop-blur-sm uppercase">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-[10px] sm:text-xs font-semibold tracking-wider backdrop-blur-sm uppercase">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                     AI-Powered Enterprise Solutions
                   </span>
                 </motion.div>
 
-                {/* Main Heading */}
+                {/* Main Heading - Mobile Optimized */}
                 <motion.h1
                   initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.15] md:leading-[1.1] tracking-tight"
                 >
                   <span className="block bg-linear-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                     High-Performance
                   </span>
-                  <span className="block bg-linear-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mt-3">
+                  <span className="block bg-linear-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mt-2 md:mt-3">
                     Enterprise Software Solutions
                   </span>
                 </motion.h1>
                 
-                {/* Description */}
+                {/* Description - Mobile Optimized */}
                 <motion.p
                   initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto font-light"
+                  className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto font-light px-4 md:px-0"
                 >
                   <span className="font-semibold text-white">Widdi</span> delivers{' '}
                   <span className="text-cyan-400 font-medium">AI-powered SaaS platforms</span>,{' '}
@@ -239,19 +282,20 @@ export default function Home() {
                   professional software development services to global enterprises.
                 </motion.p>
                 
-                {/* CTA Buttons */}
+                {/* CTA Buttons - Mobile Stack */}
                 <motion.div
                   initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
+                  className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-4 w-full max-w-md mx-auto px-4 sm:px-0"
                 >
-                  <Link href="/services">
+                  <Link href="/services" className="w-full sm:w-auto">
                     <motion.button
                       initial={false}
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.98 }}
-                      className="group px-8 py-3.5 bg-linear-to-r from-blue-500 via-cyan-500 to-blue-600 text-white rounded-lg font-semibold text-base shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all inline-flex items-center gap-2"
+                      className="w-full sm:w-auto group px-6 sm:px-8 py-3.5 sm:py-4 bg-linear-to-r from-blue-500 via-cyan-500 to-blue-600 text-white rounded-xl font-semibold text-sm sm:text-base shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all inline-flex items-center justify-center gap-2 touch-manipulation"
+                      style={{ minHeight: '48px' }}
                     >
                       Explore Solutions
                       <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -259,12 +303,13 @@ export default function Home() {
                       </svg>
                     </motion.button>
                   </Link>
-                  <Link href="/contact">
+                  <Link href="/contact" className="w-full sm:w-auto">
                     <motion.button
                       initial={false}
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.98 }}
-                      className="px-8 py-3.5 bg-white/5 backdrop-blur-sm text-white rounded-lg font-semibold text-base border border-white/20 hover:bg-white/10 hover:border-white/30 transition-all"
+                      className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-white/5 backdrop-blur-sm text-white rounded-xl font-semibold text-sm sm:text-base border-2 border-white/20 hover:bg-white/10 hover:border-white/30 transition-all touch-manipulation"
+                      style={{ minHeight: '48px' }}
                     >
                       Request Demo
                     </motion.button>
@@ -272,12 +317,12 @@ export default function Home() {
                 </motion.div>
               </div>
 
-              {/* Stats Section */}
+              {/* Stats Section - Mobile 2 Column */}
               <motion.div
                 initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl"
+                className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 w-full max-w-5xl px-4 sm:px-0"
               >
                 {[
                   { 
@@ -319,7 +364,7 @@ export default function Home() {
                 ].map((stat, index) => (
                   <motion.div 
                     key={stat.label} 
-                    className="text-center p-5 rounded-xl bg-gray-900/30 backdrop-blur-sm border border-gray-800 hover:border-blue-500/40 transition-all"
+                    className="text-center p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-gray-900/30 backdrop-blur-sm border border-gray-800 hover:border-blue-500/40 transition-all"
                     initial={false}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
@@ -335,31 +380,31 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Section 2: Core Solutions */}
-          <section className="min-w-full h-screen snap-start snap-always shrink-0 flex items-center justify-center bg-linear-to-br from-gray-950 via-black to-gray-900 p-6 sm:p-8 lg:p-12">
+          {/* Section 2: Core Solutions - Mobile Optimized */}
+          <section className={`${isMobile ? 'min-h-screen py-20' : 'min-w-full h-screen snap-start snap-always shrink-0'} flex items-center justify-center bg-linear-to-br from-gray-950 via-black to-gray-900 p-4 sm:p-6 lg:p-12`}>
             <div className="max-w-7xl w-full">
               <motion.div
                 initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-center mb-14"
+                className="text-center mb-8 sm:mb-10 md:mb-14"
               >
                 <motion.span
                   initial={false}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  className="inline-block px-4 py-1.5 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-xs font-semibold tracking-wider backdrop-blur-sm mb-4 uppercase"
+                  className="inline-block px-3 sm:px-4 py-1.5 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-[10px] sm:text-xs font-semibold tracking-wider backdrop-blur-sm mb-3 sm:mb-4 uppercase"
                 >
                   Core Solutions
                 </motion.span>
-                <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent tracking-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-linear-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent tracking-tight px-4">
                   Enterprise Software Ecosystem
                 </h2>
-                <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
+                <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light px-4 sm:px-6">
                   Strengthen your digital infrastructure with scalable, secure, and AI-powered software solutions
                 </p>
               </motion.div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-8 sm:mb-10">
                 {services.map((service, index) => (
                   <motion.div
                     key={service.title}
@@ -367,17 +412,17 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.4 }}
                     whileHover={{ y: -5 }}
-                    className="group p-7 rounded-xl bg-linear-to-br from-gray-900/80 to-gray-900/40 backdrop-blur-md shadow-lg hover:shadow-xl hover:shadow-blue-500/20 transition-all border border-gray-800 hover:border-blue-500/40 relative overflow-hidden"
+                    className="group p-5 sm:p-6 md:p-7 rounded-xl sm:rounded-2xl bg-linear-to-br from-gray-900/80 to-gray-900/40 backdrop-blur-md shadow-lg hover:shadow-xl hover:shadow-blue-500/20 transition-all border border-gray-800 hover:border-blue-500/40 relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-linear-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all" />
                     <div className="relative z-10">
-                      <div className="text-blue-400 mb-5 transform group-hover:scale-105 transition-transform">
+                      <div className="text-blue-400 mb-4 sm:mb-5 transform group-hover:scale-105 transition-transform">
                         {service.icon}
                       </div>
-                      <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                      <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white group-hover:text-blue-300 transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-sm text-gray-400 leading-relaxed font-light">
+                      <p className="text-xs sm:text-sm text-gray-400 leading-relaxed font-light">
                         {service.description}
                       </p>
                     </div>
@@ -389,14 +434,15 @@ export default function Home() {
                 initial={false}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="text-center"
+                className="text-center px-4"
               >
                 <Link href="/services">
                   <motion.button
                     initial={false}
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group px-8 py-3.5 bg-linear-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold text-base shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 transition-all inline-flex items-center gap-2"
+                    className="group px-6 sm:px-8 py-3.5 sm:py-4 bg-linear-to-r from-blue-500 to-cyan-500 text-white rounded-xl font-semibold text-sm sm:text-base shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 transition-all inline-flex items-center gap-2 touch-manipulation"
+                    style={{ minHeight: '48px' }}
                   >
                     View All Solutions
                     <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -408,44 +454,44 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Section 3: Technical Capabilities */}
-          <section className="min-w-full h-screen snap-start snap-always shrink-0 flex items-center justify-center bg-black p-6 sm:p-8 lg:p-12">
+          {/* Section 3: Technical Capabilities - Mobile Optimized */}
+          <section className={`${isMobile ? 'min-h-screen py-20' : 'min-w-full h-screen snap-start snap-always shrink-0'} flex items-center justify-center bg-black p-4 sm:p-6 lg:p-12`}>
             <div className="max-w-7xl w-full">
               <motion.div
                 initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-center mb-14"
+                className="text-center mb-8 sm:mb-10 md:mb-14"
               >
                 <motion.span
                   initial={false}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  className="inline-block px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-xs font-semibold tracking-wider backdrop-blur-sm mb-4 uppercase"
+                  className="inline-block px-3 sm:px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-[10px] sm:text-xs font-semibold tracking-wider backdrop-blur-sm mb-3 sm:mb-4 uppercase"
                 >
                   Technical Excellence
                 </motion.span>
-                <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent tracking-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent tracking-tight px-4">
                   Our Technical Capabilities
                 </h2>
-                <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
+                <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light px-4 sm:px-6">
                   High-performance, secure, and scalable systems powered by modern software architecture and DevOps practices
                 </p>
               </motion.div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 mb-8 sm:mb-10">
                 {capabilities.map((capability, index) => (
                   <motion.div
                     key={capability.title}
                     initial={false}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.08 }}
-                    className="p-6 rounded-xl bg-linear-to-br from-gray-900/60 to-gray-900/30 backdrop-blur-sm border border-gray-800 hover:border-cyan-500/40 transition-all group"
+                    className="p-5 sm:p-6 md:p-7 rounded-xl sm:rounded-2xl bg-linear-to-br from-gray-900/60 to-gray-900/30 backdrop-blur-sm border border-gray-800 hover:border-cyan-500/40 transition-all group"
                   >
-                    <div className="text-cyan-400 mb-4 group-hover:scale-105 transition-transform">
+                    <div className="text-cyan-400 mb-4 sm:mb-5 group-hover:scale-105 transition-transform">
                       {capability.icon}
                     </div>
-                    <h4 className="text-base font-bold text-cyan-400 mb-2">{capability.title}</h4>
-                    <p className="text-sm text-gray-400 leading-relaxed font-light">{capability.description}</p>
+                    <h4 className="text-base sm:text-lg font-bold text-cyan-400 mb-2 sm:mb-3">{capability.title}</h4>
+                    <p className="text-xs sm:text-sm text-gray-400 leading-relaxed font-light">{capability.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -505,26 +551,26 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Section 4: Contact */}
-          <section className="min-w-full h-screen snap-start snap-always shrink-0 flex items-center justify-center bg-linear-to-br from-black via-gray-950 to-gray-900 p-6 sm:p-8 lg:p-12">
+          {/* Section 4: Contact - Mobile Optimized */}
+          <section className={`${isMobile ? 'min-h-screen py-20' : 'min-w-full h-screen snap-start snap-always shrink-0'} flex items-center justify-center bg-linear-to-br from-black via-gray-950 to-gray-900 p-4 sm:p-6 lg:p-12`}>
             <div className="max-w-4xl w-full">
               <motion.div
                 initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-center mb-12"
+                className="text-center mb-8 sm:mb-10 md:mb-12"
               >
                 <motion.span
                   initial={false}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  className="inline-block px-4 py-1.5 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 text-xs font-semibold tracking-wider backdrop-blur-sm mb-4 uppercase"
+                  className="inline-block px-3 sm:px-4 py-1.5 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 text-[10px] sm:text-xs font-semibold tracking-wider backdrop-blur-sm mb-3 sm:mb-4 uppercase"
                 >
                   Let's Connect
                 </motion.span>
-                <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent tracking-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-linear-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent tracking-tight px-4">
                   Partner With Us
                 </h2>
-                <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
+                <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light px-4 sm:px-6">
                   Connect with Widdi's expert team to discuss your enterprise software needs. Let's develop tailored solutions together.
                 </p>
               </motion.div>
@@ -533,9 +579,9 @@ export default function Home() {
                 initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="bg-linear-to-br from-gray-900/80 to-gray-900/40 backdrop-blur-md rounded-2xl p-8 sm:p-10 border border-gray-800 shadow-xl"
+                className="bg-linear-to-br from-gray-900/80 to-gray-900/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 md:p-10 border border-gray-800 shadow-xl"
               >
-                <div className="grid sm:grid-cols-2 gap-5 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-6 sm:mb-8">
                   <div className="flex items-start space-x-3 p-4 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-blue-500/40 transition-all">
                     <div className="p-2.5 bg-blue-500/20 rounded-lg">
                       <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
@@ -568,7 +614,8 @@ export default function Home() {
                     initial={false}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group w-full px-8 py-4 bg-linear-to-r from-blue-500 via-purple-500 to-cyan-500 text-white rounded-lg font-semibold text-base shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-purple-500/30 transition-all flex items-center justify-center gap-2"
+                    className="group w-full px-6 sm:px-8 py-4 bg-linear-to-r from-blue-500 via-purple-500 to-cyan-500 text-white rounded-xl font-semibold text-sm sm:text-base shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-purple-500/30 transition-all flex items-center justify-center gap-2 touch-manipulation"
+                    style={{ minHeight: '48px' }}
                   >
                     Schedule Consultation
                     <svg className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>

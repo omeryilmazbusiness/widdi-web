@@ -55,6 +55,8 @@ body {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Accessibility Enhancements */
@@ -172,4 +174,100 @@ select:focus-visible {
 
 .mobile-menu-enter {
   animation: slideIn 0.3s ease-out;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE UTILITIES
+   ======================================== */
+
+/* iOS Safe Area Support - Notch & Bottom Bar */
+.safe-top {
+  padding-top: max(env(safe-area-inset-top), 0px);
+}
+
+.safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom), 0px);
+}
+
+.safe-left {
+  padding-left: max(env(safe-area-inset-left), 0px);
+}
+
+.safe-right {
+  padding-right: max(env(safe-area-inset-right), 0px);
+}
+
+/* Touch Optimization */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive Typography Scale */
+@media (max-width: 640px) {
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  h3 {
+    font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  }
+}
+
+/* ========================================
+   MOBILE SPECIFIC FIXES
+   ======================================== */
+
+/* Prevent iOS zoom on input focus */
+@media screen and (max-width: 767px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Better mobile tap targets */
+@media (max-width: 768px) {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Smooth momentum scrolling on iOS */
+.overflow-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for iOS input shadows */
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

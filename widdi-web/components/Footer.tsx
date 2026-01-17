@@ -1,11 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
   const footerLinks = {
     solutions: [
@@ -70,136 +72,138 @@ export default function Footer() {
     { name: 'GDPR', description: 'Compliant' },
   ];
 
+  const toggleSection = (section: string) => {
+    setExpandedSection(expandedSection === section ? null : section);
+  };
+
+  const FooterSection = ({ title, links, sectionKey }: { title: string; links: any[]; sectionKey: string }) => {
+    const isExpanded = expandedSection === sectionKey;
+    
+    return (
+      <div className="border-b border-gray-800 md:border-none">
+        {/* Mobile: Accordion Header */}
+        <button
+          onClick={() => toggleSection(sectionKey)}
+          className="md:hidden w-full flex items-center justify-between py-4 text-left touch-manipulation"
+          aria-expanded={isExpanded}
+          style={{ minHeight: '48px' }}
+        >
+          <h4 className="text-sm font-semibold text-white uppercase tracking-wider">{title}</h4>
+          <motion.svg
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+            className="w-5 h-5 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </motion.svg>
+        </button>
+
+        {/* Desktop: Always Visible Header */}
+        <h4 className="hidden md:block text-sm font-semibold text-white mb-4 uppercase tracking-wider">{title}</h4>
+
+        {/* Links - Accordion on Mobile, Always Visible on Desktop */}
+        <AnimatePresence>
+          {(isExpanded || true) && (
+            <motion.ul
+              initial={false}
+              animate={{ 
+                height: isExpanded ? 'auto' : 0,
+                opacity: isExpanded ? 1 : 0 
+              }}
+              className="space-y-3 overflow-hidden md:h-auto! md:opacity-100! pb-4 md:pb-0"
+            >
+              {links.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-blue-400 active:text-blue-300 transition-colors font-light block py-1 touch-manipulation"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  };
+
   return (
     <footer className="relative bg-black border-t border-gray-800">
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-12 sm:py-16 lg:py-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 lg:gap-12">
-            {/* Brand Column */}
-            <div className="col-span-2 lg:col-span-2">
-              <Link href="/" className="inline-block mb-6">
-                <Image
-                  src="/widdi-logo.png"
-                  alt="Widdi Logo"
-                  width={100}
-                  height={35}
-                  className="h-8 w-auto object-contain"
-                />
-              </Link>
-              <p className="text-sm text-gray-400 leading-relaxed mb-6 max-w-sm font-light">
-                Enterprise-grade AI-powered software solutions for global businesses. Trusted by 500+ companies worldwide.
-              </p>
-              
-              {/* Social Links */}
-              <div className="flex items-center gap-4">
-                {socialLinks.map((social) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="p-2.5 bg-gray-800/50 hover:bg-blue-500/20 rounded-lg text-gray-400 hover:text-blue-400 transition-all border border-gray-700 hover:border-blue-500/40"
-                    aria-label={social.name}
-                  >
-                    {social.icon}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-
-            {/* Solutions */}
-            <div>
-              <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Solutions</h4>
-              <ul className="space-y-3">
-                {footerLinks.solutions.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-gray-400 hover:text-blue-400 transition-colors font-light"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Company</h4>
-              <ul className="space-y-3">
-                {footerLinks.company.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-gray-400 hover:text-blue-400 transition-colors font-light"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Resources */}
-            <div>
-              <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Resources</h4>
-              <ul className="space-y-3">
-                {footerLinks.resources.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-gray-400 hover:text-blue-400 transition-colors font-light"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div>
-              <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Legal</h4>
-              <ul className="space-y-3">
-                {footerLinks.legal.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-gray-400 hover:text-blue-400 transition-colors font-light"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+        <div className="py-8 sm:py-12 lg:py-16">
+          {/* Brand Section - Full Width on Mobile */}
+          <div className="mb-8 sm:mb-10 lg:mb-12 pb-8 border-b border-gray-800">
+            <Link href="/" className="inline-block mb-4 sm:mb-6">
+              <Image
+                src="/widdi-logo.png"
+                alt="Widdi Logo"
+                width={120}
+                height={42}
+                className="h-8 sm:h-10 w-auto object-contain"
+              />
+            </Link>
+            <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-6 max-w-md font-light">
+              Enterprise-grade AI-powered software solutions for global businesses. Trusted by 500+ companies worldwide.
+            </p>
+            
+            {/* Social Links - Touch Optimized (48x48px) */}
+            <div className="flex items-center gap-3 sm:gap-4">
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-3 bg-gray-800/50 hover:bg-blue-500/20 active:bg-blue-500/30 rounded-xl text-gray-400 hover:text-blue-400 transition-all border border-gray-700 hover:border-blue-500/40 touch-manipulation"
+                  aria-label={social.name}
+                  style={{ minWidth: '48px', minHeight: '48px' }}
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
             </div>
           </div>
 
-          {/* Newsletter Section */}
-          <div className="mt-12 pt-12 border-t border-gray-800">
+          {/* Footer Links - Accordion on Mobile, Grid on Desktop */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 md:gap-8 lg:gap-12 mb-8 sm:mb-10">
+            <FooterSection title="Solutions" links={footerLinks.solutions} sectionKey="solutions" />
+            <FooterSection title="Company" links={footerLinks.company} sectionKey="company" />
+            <FooterSection title="Resources" links={footerLinks.resources} sectionKey="resources" />
+            <FooterSection title="Legal" links={footerLinks.legal} sectionKey="legal" />
+          </div>
+
+          {/* Newsletter Section - Mobile Optimized */}
+          <div className="pt-8 sm:pt-10 border-t border-gray-800">
             <div className="max-w-xl">
-              <h4 className="text-lg font-semibold text-white mb-2">Stay Updated</h4>
-              <p className="text-sm text-gray-400 mb-4 font-light">
+              <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Stay Updated</h4>
+              <p className="text-xs sm:text-sm text-gray-400 mb-4 font-light">
                 Subscribe to our newsletter for enterprise insights and product updates.
               </p>
-              <form className="flex gap-3" onSubmit={(e) => e.preventDefault()}>
+              <form className="flex flex-col sm:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
                 <input
                   type="email"
                   placeholder="your.email@company.com"
-                  className="flex-1 px-4 py-2.5 text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="flex-1 px-4 py-3 text-sm bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all touch-manipulation"
+                  style={{ minHeight: '48px' }}
+                  aria-label="Email address"
                 />
                 <motion.button
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all"
+                  className="w-full sm:w-auto px-6 py-3 bg-linear-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/30 active:shadow-blue-500/40 transition-all touch-manipulation"
+                  style={{ minHeight: '48px' }}
                 >
                   Subscribe
                 </motion.button>
@@ -208,29 +212,29 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar - Mobile Stack */}
         <div className="py-6 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
             {/* Copyright */}
-            <p className="text-xs text-gray-500 font-light">
+            <p className="text-xs text-gray-500 font-light text-center md:text-left">
               © {currentYear} Widdi. All rights reserved.
             </p>
 
-            {/* Certifications */}
-            <div className="flex items-center gap-6 text-gray-600">
+            {/* Certifications - Mobile Responsive */}
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 text-gray-600">
               {certifications.map((cert, index) => (
-                <div key={cert.name} className="flex items-center gap-6">
-                  {index > 0 && <div className="w-px h-4 bg-gray-800" />}
+                <div key={cert.name} className="flex items-center gap-3 sm:gap-4">
+                  {index > 0 && <div className="hidden sm:block w-px h-4 bg-gray-800" />}
                   <div className="text-center">
-                    <div className="text-xs font-semibold">{cert.name}</div>
-                    <div className="text-[10px] text-gray-700">{cert.description}</div>
+                    <div className="text-[10px] sm:text-xs font-semibold">{cert.name}</div>
+                    <div className="text-[9px] sm:text-[10px] text-gray-700">{cert.description}</div>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Status */}
-            <div className="flex items-center gap-2 text-xs text-gray-500">
+            {/* Status - Always Centered on Mobile */}
+            <div className="flex items-center gap-2 text-[10px] sm:text-xs text-gray-500">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               <span className="font-light">All systems operational</span>
             </div>
