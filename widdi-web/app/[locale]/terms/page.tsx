@@ -199,7 +199,7 @@ export default function Terms() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/30 transition-all"
+                className="px-6 py-3 bg-linear-to-r from-purple-500 to-blue-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/30 transition-all"
               >
                 Contact Legal Team
               </motion.button>

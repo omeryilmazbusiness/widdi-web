@@ -5,12 +5,17 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useLocale, useTranslations } from 'next-intl';
+import { locales, localeNames, Locale } from '@/i18n.config';
 
 export default function Navigation() {
   const pathname = usePathname();
+  const locale = useLocale();
+  const t = useTranslations('navigation');
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
 
   // Fix hydration: wait for client mount
   useEffect(() => {
@@ -75,11 +80,36 @@ export default function Navigation() {
   }, [mobileMenuOpen]);
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: t('home'), path: `/${locale}` },
+    { name: t('services'), path: `/${locale}/services` },
+    { name: t('about'), path: `/${locale}/about` },
+    { name: t('contact'), path: `/${locale}/contact` },
   ];
+
+  // Get current path without locale for language switching
+  const getPathWithoutLocale = () => {
+    const segments = pathname.split('/').filter(Boolean);
+    // Remove locale from path if it exists
+    if (segments.length > 0 && locales.includes(segments[0] as Locale)) {
+      segments.shift();
+    }
+    // Return path with leading slash, or empty string for home
+    return segments.length > 0 ? `/${segments.join('/')}` : '';
+  };
+
+  // Get the path for switching locale
+  const getLocalePath = (newLocale: Locale) => {
+    const pathWithoutLocale = getPathWithoutLocale();
+    return `/${newLocale}${pathWithoutLocale}`;
+  };
+
+  // Force locale change by using window.location for hard navigation
+  const changeLocale = (newLocale: Locale) => {
+    const newPath = getLocalePath(newLocale);
+    
+    // Force hard navigation to ensure locale change
+    window.location.href = newPath;
+  };
 
   // Prevent hydration mismatch: don't render until mounted
   if (!mounted) {
@@ -135,7 +165,7 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             {/* Logo */}
-            <Link href="/" className="relative z-50">
+            <Link href={`/${locale}`} className="relative z-50">
               <div className="flex items-center gap-2">
                 <Image
                   src="/widdi-logo.png"
@@ -168,12 +198,63 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* Desktop CTA */}
-            <Link href="/contact" className="hidden md:block">
-              <button className="px-5 lg:px-6 py-2 bg-linear-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium text-sm hover:shadow-lg hover:shadow-blue-500/50 transition-shadow">
-                Get Started
-              </button>
-            </Link>
+            {/* Desktop Actions: Language Switcher + CTA */}
+            <div className="hidden md:flex items-center gap-4">
+              {/* Language Switcher */}
+              <div className="relative">
+                <button
+                  onClick={() => setLangMenuOpen(!langMenuOpen)}
+                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-300 hover:text-blue-400 transition-colors"
+                  aria-label="Change language"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                  </svg>
+                  <span className="uppercase">{locale}</span>
+                  <svg className={`w-3 h-3 transition-transform ${langMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                <AnimatePresence>
+                  {langMenuOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute right-0 mt-2 w-40 bg-gray-900 border border-gray-800 rounded-xl shadow-xl overflow-hidden z-50"
+                      onMouseLeave={() => setLangMenuOpen(false)}
+                    >
+                      {locales.map((loc) => (
+                        <Link
+                          key={loc}
+                          href={`/${loc}${getPathWithoutLocale()}`}
+                          onClick={() => setLangMenuOpen(false)}
+                        >
+                          <div
+                            className={`px-4 py-3 text-sm transition-colors ${
+                              locale === loc
+                                ? 'bg-blue-500/20 text-blue-400 font-semibold'
+                                : 'text-gray-300 hover:bg-gray-800'
+                            }`}
+                          >
+                            {localeNames[loc]}
+                          </div>
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* CTA Button */}
+              <Link href={`/${locale}/contact`}>
+                <button className="px-5 lg:px-6 py-2 bg-linear-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium text-sm hover:shadow-lg hover:shadow-blue-500/50 transition-shadow">
+                  {t('getStarted')}
+                </button>
+              </Link>
+            </div>
 
             {/* Mobile Menu Button - Touch Optimized (48x48px) */}
             <button
@@ -277,6 +358,31 @@ export default function Navigation() {
                       </Link>
                     </motion.div>
                   ))}
+
+                  {/* Mobile Language Switcher */}
+                  <div className="pt-6 border-t border-gray-800">
+                    <p className="text-xs text-gray-500 uppercase mb-3 px-2">Language</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {locales.map((loc) => (
+                        <Link
+                          key={loc}
+                          href={getLocalePath(loc)}
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <motion.div
+                            whileTap={{ scale: 0.95 }}
+                            className={`px-4 py-3 rounded-xl text-center font-semibold text-sm transition-all touch-manipulation ${
+                              locale === loc
+                                ? 'bg-blue-500/20 text-blue-400 border-2 border-blue-500/40'
+                                : 'bg-gray-800/50 text-gray-400 border-2 border-transparent hover:border-gray-700'
+                            }`}
+                          >
+                            {localeNames[loc]}
+                          </motion.div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </nav>
 
                 {/* Bottom Section */}
@@ -287,13 +393,13 @@ export default function Navigation() {
                   className="space-y-4 pt-8 border-t border-gray-800"
                 >
                   {/* CTA Button */}
-                  <Link href="/contact" className="block">
+                  <Link href={`/${locale}/contact`} className="block">
                     <motion.button
                       whileTap={{ scale: 0.97 }}
                       className="w-full px-6 py-4 bg-linear-to-r from-blue-500 via-purple-500 to-blue-600 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all touch-manipulation"
                       style={{ minHeight: '56px' }}
                     >
-                      Get Started
+                      {t('getStarted')}
                     </motion.button>
                   </Link>
 

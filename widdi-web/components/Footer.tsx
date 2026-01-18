@@ -4,35 +4,38 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const locale = useLocale();
+  const t = useTranslations('footer');
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
   const footerLinks = {
     solutions: [
-      { name: 'AI-Powered SaaS', href: '/services' },
-      { name: 'High-Volume Systems', href: '/services' },
-      { name: 'Cloud Architecture', href: '/services' },
-      { name: 'Digital Transformation', href: '/services' },
+      { name: t('links.aiSaas'), href: `/${locale}/services` },
+      { name: t('links.highVolume'), href: `/${locale}/services` },
+      { name: t('links.cloudArchitecture'), href: `/${locale}/services` },
+      { name: t('links.digitalTransformation'), href: `/${locale}/services` },
     ],
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Careers', href: '/contact' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Partners', href: '/contact' },
+      { name: t('links.about'), href: `/${locale}/about` },
+      { name: t('links.careers'), href: `/${locale}/contact` },
+      { name: t('links.contact'), href: `/${locale}/contact` },
+      { name: t('links.partners'), href: `/${locale}/contact` },
     ],
     resources: [
-      { name: 'Documentation', href: '/services' },
-      { name: 'Case Studies', href: '/services' },
-      { name: 'Support', href: '/contact' },
-      { name: 'FAQ', href: '/contact' },
+      { name: t('links.documentation'), href: `/${locale}/services` },
+      { name: t('links.caseStudies'), href: `/${locale}/services` },
+      { name: t('links.support'), href: `/${locale}/contact` },
+      { name: t('links.faq'), href: `/${locale}/contact` },
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/privacy' },
-      { name: 'Security', href: '/about' },
+      { name: t('links.privacy'), href: `/${locale}/privacy` },
+      { name: t('links.terms'), href: `/${locale}/terms` },
+      { name: t('links.cookies'), href: `/${locale}/privacy` },
+      { name: t('links.security'), href: `/${locale}/about` },
     ],
   };
 
@@ -142,7 +145,7 @@ export default function Footer() {
         <div className="py-8 sm:py-12 lg:py-16">
           {/* Brand Section - Full Width on Mobile */}
           <div className="mb-8 sm:mb-10 lg:mb-12 pb-8 border-b border-gray-800">
-            <Link href="/" className="inline-block mb-4 sm:mb-6">
+            <Link href={`/${locale}`} className="inline-block mb-4 sm:mb-6">
               <Image
                 src="/widdi-logo.png"
                 alt="Widdi Logo"
@@ -152,7 +155,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-6 max-w-md font-light">
-              Enterprise-grade AI-powered software solutions for global businesses. Trusted by 500+ companies worldwide.
+              {t('description')}
             </p>
             
             {/* Social Links - Touch Optimized (48x48px) */}
@@ -177,23 +180,23 @@ export default function Footer() {
 
           {/* Footer Links - Accordion on Mobile, Grid on Desktop */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 md:gap-8 lg:gap-12 mb-8 sm:mb-10">
-            <FooterSection title="Solutions" links={footerLinks.solutions} sectionKey="solutions" />
-            <FooterSection title="Company" links={footerLinks.company} sectionKey="company" />
-            <FooterSection title="Resources" links={footerLinks.resources} sectionKey="resources" />
-            <FooterSection title="Legal" links={footerLinks.legal} sectionKey="legal" />
+            <FooterSection title={t('solutions')} links={footerLinks.solutions} sectionKey="solutions" />
+            <FooterSection title={t('company')} links={footerLinks.company} sectionKey="company" />
+            <FooterSection title={t('resources')} links={footerLinks.resources} sectionKey="resources" />
+            <FooterSection title={t('legal')} links={footerLinks.legal} sectionKey="legal" />
           </div>
 
           {/* Newsletter Section - Mobile Optimized */}
           <div className="pt-8 sm:pt-10 border-t border-gray-800">
             <div className="max-w-xl">
-              <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Stay Updated</h4>
+              <h4 className="text-base sm:text-lg font-semibold text-white mb-2">{t('newsletter.title')}</h4>
               <p className="text-xs sm:text-sm text-gray-400 mb-4 font-light">
-                Subscribe to our newsletter for enterprise insights and product updates.
+                {t('newsletter.description')}
               </p>
               <form className="flex flex-col sm:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
                 <input
                   type="email"
-                  placeholder="your.email@company.com"
+                  placeholder={t('newsletter.placeholder')}
                   className="flex-1 px-4 py-3 text-sm bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all touch-manipulation"
                   style={{ minHeight: '48px' }}
                   aria-label="Email address"
@@ -205,7 +208,7 @@ export default function Footer() {
                   className="w-full sm:w-auto px-6 py-3 bg-linear-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/30 active:shadow-blue-500/40 transition-all touch-manipulation"
                   style={{ minHeight: '48px' }}
                 >
-                  Subscribe
+                  {t('newsletter.subscribe')}
                 </motion.button>
               </form>
             </div>
@@ -217,7 +220,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
             {/* Copyright */}
             <p className="text-xs text-gray-500 font-light text-center md:text-left">
-              © {currentYear} Widdi. All rights reserved.
+              {t('copyright', { year: currentYear })}
             </p>
 
             {/* Certifications - Mobile Responsive */}
@@ -236,7 +239,7 @@ export default function Footer() {
             {/* Status - Always Centered on Mobile */}
             <div className="flex items-center gap-2 text-[10px] sm:text-xs text-gray-500">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span className="font-light">All systems operational</span>
+              <span className="font-light">{t('status')}</span>
             </div>
           </div>
         </div>

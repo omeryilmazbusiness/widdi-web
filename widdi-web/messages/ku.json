@@ -1,0 +1,461 @@
+{
+    "navigation": {
+      "home": "Rûpela Sereke",
+      "services": "Karûbar",
+      "about": "Derbarê Me",
+      "contact": "Têkilî",
+      "getStarted": "Dest Pê Bike"
+    },
+    "hero": {
+      "badge": "Çareseriyên Korporatîf ên bi Zîrekiya Destikî",
+      "title": {
+        "line1": "Çareseriyên Nermalava",
+        "line2": "Korporatîf ên Performansa Bilind"
+      },
+      "description": "{company}, platformên SaaS ên bi zîrekiya destikî, rêvebiriya pergalên pîvanên bilind û karûbarên pêşkeftina nermalavê ya profesyonel ji bo karsaziyên cîhanî peyda dike.",
+      "exploreSolutions": "Çareseriyan Keşf Bike",
+      "requestDemo": "Dema Daxwaz Bike",
+      "stats": {
+        "clients": "Xerîdarên Korporatîf",
+        "uptime": "Dema Xebitînê SLA",
+        "transactions": "Ragihandin/Roj",
+        "countries": "Welatan"
+      }
+    },
+    "solutions": {
+      "badge": "Çareseriyên Bingehîn",
+      "title": "Ekosîstema Nermalava Korporatîf",
+      "subtitle": "Bingeha xwe ya dîjîtal bi çareseriyên nermalavê yên skalable, ewle û bi zîrekiya destikî xurt bikin",
+      "viewAll": "Hemû Çareseriyan Nîşan Bide",
+      "items": {
+        "aiSaas": {
+          "title": "Platforma SaaS a bi Zîrekiya Destikî",
+          "description": "Çareseriyên nermalava korporatîf ên li ser cloud ku bi zîrekiya destikî ne. Pêvajoyên xwe yên karsaziyê bi hînkirina makîneyê û analîtîka daneyan a pêşkeftî otomatîk bikin û optimize bikin."
+        },
+        "highVolume": {
+          "title": "Rêvebiriya Pergalên Pîvanên Bilind",
+          "description": "Kapasîteya ragihîştinên 10+ mîlyon li rojê û %99.99 dema xebitînê SLA. Pêşkêşkirina bênavber bi scalinga otomatîk, balanskirina barê û şopandina pergalê 7/24."
+        },
+        "transformation": {
+          "title": "Veguherîna Dîjîtal a Korporatîf",
+          "description": "Şêwirmendiya veguherîna dîjîtal a tevahî û sepandin. Nûvekirina pergala kevin, mîmariya mikroservisê û întegrasyona DevOps a bêkêmasî."
+        }
+      }
+    },
+    "capabilities": {
+      "badge": "Pêbaweriya Teknîkî",
+      "title": "Jêhatiyên Me yên Teknîkî",
+      "subtitle": "Pergalên performansa bilind, ewle û skalable ku bi mîmariya nermalava modern û pratîkên DevOps têne piştgirî kirin",
+      "items": {
+        "cloudNative": {
+          "title": "Mîmariya Cloud-Native",
+          "description": "Bingeh a modern a li ser Kubernetes, Docker û mikroservisan ava bûyî"
+        },
+        "analytics": {
+          "title": "Analîtîka Pêşkeftî",
+          "description": "Pêvajokirina daneyan a demê rastîn û jêhatiyên analîtîka pêşbînîkirî"
+        },
+        "security": {
+          "title": "Ewlehiya Pêşîn",
+          "description": "Protokolên ewlehiyê yên li gorî ISO 27001, SOC 2 û GDPR"
+        },
+        "apiFirst": {
+          "title": "Sêwirana API-First",
+          "description": "Întegrasyona bêkêmasî bi APIyên RESTful û GraphQL"
+        }
+      },
+      "mission": {
+        "title": "Mîsyona Me",
+        "description": "Karsaziyan bi zîrekiya destikî û teknolojiyên cloud xurt bikin da ku avantajên reqabetê bidest bixin, çareseriyên nermalava skalable peyda bikin ku mezinbûnê piştgirî dike."
+      },
+      "vision": {
+        "title": "Dîtina Me",
+        "description": "Di veguherîna dîjîtal a cîhanî de bibe hevkara teknolojiya pêşeng, standardên cîhanî yên di pêbaweriya pergalên pîvanên bilind de diyar bike."
+      },
+      "values": {
+        "title": "Nirxên Me",
+        "description": "Pêbaweriya teknîkî, pêbaweriya operasyonel, înovasyon a domdar û girêdana bêhêvî ya ji bo çareseriyên navendî yên xerîdar."
+      }
+    },
+    "contact": {
+      "badge": "Ka Em Girêbidin",
+      "title": "Veguherîna Xwe ya Dîjîtal Dest Pê Bikin",
+      "subtitle": "Ji bo nîqaşkirina hewcedariyên projeya xwe û keşfkirina ka Widdi çawa dikare mezinbûna karsaziya we bilez bike bi tîma çareseriyên korporatîf re têkilî daynin",
+      "pageTitle": "Bi Me re Hevkar Bibin",
+      "pageSubtitle": "Ji bo nîqaşkirina hewcedariyên xwe yên nermalava korporatîf bi tîma pisporên Widdi re têkilî daynin. Ka pêkve çareseriyên taybet pêşve bixin.",
+      "form": {
+        "title": "Daxwaza Şêwirmendiya Korporatîf",
+        "subtitle": "Forma jêrîn dagirin û tîma me dê di nav 24 saetan de bi we re têkilî dayne",
+        "name": {
+          "label": "Navê Tevahî",
+          "placeholder": "Ahmet Yılmaz",
+          "required": "Nav pêdivî ye"
+        },
+        "email": {
+          "label": "E-nameya Karsaziyê",
+          "placeholder": "ahmet.yilmaz@pargidan.com",
+          "required": "E-name pêdivî ye",
+          "invalid": "Navnîşana e-nameyê nederbasdar e"
+        },
+        "company": {
+          "label": "Navê Pargîdanê",
+          "placeholder": "Pargîdana Acme",
+          "required": "Navê pargîdanê pêdivî ye"
+        },
+        "phone": {
+          "label": "Jimareya Têlefonê",
+          "placeholder": "+90 (555) 000-0000"
+        },
+        "service": {
+          "label": "Çareseriya Pêdivî",
+          "placeholder": "Çareseriyek hilbijêrin",
+          "required": "Ji kerema xwe çareseriyek hilbijêrin",
+          "options": {
+            "aiSaas": "Platforma SaaS a bi Zîrekiya Destikî",
+            "highVolume": "Rêvebiriya Pergalên Pîvanên Bilind",
+            "cloudNative": "Mîmariya Cloud-Native",
+            "transformation": "Veguherîna Dîjîtal",
+            "devops": "DevOps û Pipeline CI/CD",
+            "security": "Ewlehî û Lihevhatî",
+            "consulting": "Şêwirmendiya Korporatîf"
+          }
+        },
+        "budget": {
+          "label": "Budçeya Projeyê (USD)",
+          "placeholder": "Rêza budçeyê hilbijêrin",
+          "options": {
+            "50k-100k": "$50,000 - $100,000",
+            "100k-250k": "$100,000 - $250,000",
+            "250k-500k": "$250,000 - $500,000",
+            "500k+": "$500,000+",
+            "discuss": "Nîqaşkirinê tercîh dikim"
+          }
+        },
+        "message": {
+          "label": "Hewcedariyên Projeyê",
+          "placeholder": "Ji kerema xwe qada projeya xwe, hewcedariyên teknîkî û armancên karsaziyê şîrove bikin...",
+          "required": "Ji kerema xwe hewcedariyên projeya xwe şîrove bikin"
+        },
+        "submit": "Daxwaza Şêwirmendiyê Bişînin",
+        "submitting": "Tê pêvajo kirin...",
+        "success": "Daxwaz bi serkeftî hate şandin! Tîma me dê di nav 24 saetan de bi we re têkilî dayne.",
+        "privacy": "Bi şandina vê formê, hûn polîtîkaya taybetiya me û mercên karûbarê qebûl dikin"
+      },
+      "methods": {
+        "enterprise": {
+          "title": "E-nameya Korporatîf",
+          "value": "enterprise@widdigroup.com",
+          "description": "Piştgiriya 7/24 Berdest e"
+        },
+        "sales": {
+          "title": "Pirsên Firotanê",
+          "value": "sales@widdigroup.com",
+          "description": "Tîma Pêşveçûna Karsaziyê"
+        },
+        "global": {
+          "title": "Navenda Sereke ya Cîhanî",
+          "value": "San Francisco, CA",
+          "description": "Di 50+ welatan de dixebite"
+        },
+        "support": {
+          "title": "Piştgiriya Teknîkî",
+          "value": "support@widdigroup.com",
+          "description": "Bingeh û Întegrasyon"
+        }
+      },
+      "benefits": {
+        "title": "Çima bi Widdi re Hevkar Bibin?",
+        "items": {
+          "security": {
+            "title": "Ewlehiya Asta Korporatîf",
+            "description": "Bingeha sertîfîkaya ISO 27001 û SOC 2"
+          },
+          "uptime": {
+            "title": "SLA ya Dema Xebitînê ya %99.99",
+            "description": "Garantiya pêbaweriya giring a peywirê"
+          },
+          "support": {
+            "title": "Tîma Piştgiriya Taybet",
+            "description": "Alîkariya teknîkî 7/24/365"
+          },
+          "track": {
+            "title": "Tomarkirin a Selmandî",
+            "description": "500+ sepandina korporatîf a serkeftî"
+          }
+        }
+      },
+      "trust": {
+        "badge": "Ji aliyê 500+ xerîdarên korporatîf ên li çardora cîhanê ve tê bawer kirin",
+        "certifications": {
+          "iso": {
+            "title": "ISO 27001",
+            "subtitle": "Sertîfîka"
+          },
+          "soc": {
+            "title": "SOC 2 Type II",
+            "subtitle": "Li gorî"
+          },
+          "gdpr": {
+            "title": "GDPR",
+            "subtitle": "Li gorî"
+          }
+        }
+      },
+      "email": {
+        "title": "E-nameya Korporatîf",
+        "value": "enterprise@widdigroup.com",
+        "support": "Piştgirî 7/24"
+      },
+      "global": {
+        "title": "Hebûna Cîhanî",
+        "value": "50+ Welat",
+        "coverage": "Dahatina Cîhanî"
+      },
+      "schedule": "Şêwirmendiyê Plan Bike",
+      "supportInfo": "⚡ Piştgiriya korporatîf 7/24/365 berdest e • Garantiya SLA",
+      "certifications": {
+        "iso": "ISO 27001",
+        "soc": "SOC 2 Type II",
+        "gdpr": "Li Gorî GDPR"
+      }
+    },
+    "services": {
+      "badge": "Çareseriyên Korporatîf",
+      "title": "Karûbarên Nermalava Profesyonel",
+      "subtitle": "Çareseriyên tevahî yên nermalava korporatîf ên ji bo bilez kirina veguherîna dîjîtal û temînkirina pêbaweriya operasyonel hate sêwirandin",
+      "items": {
+        "aiSaas": {
+          "title": "Platforma SaaS a bi Zîrekiya Destikî",
+          "description": "Çareseriyên nermalava cloud ên asta korporatîf ku bi algorîtmayên zîrekiya destikî û hînkirina makîneyê têne piştgirî kirin.",
+          "features": [
+            "Mîmariya multi-tenant",
+            "Analîtîk û têgihîştinên bi zîrekiya destikî",
+            "Pêvajokirina daneyan a demê rastîn",
+            "Optimîzasyona workflow a otomatîk",
+            "Modelkirina pêşbînîkirî û pêşbînî",
+            "Pêşkeftina API ya taybet"
+          ]
+        },
+        "highVolume": {
+          "title": "Rêvebiriya Pergalên Pîvanên Bilind",
+          "description": "Rêvebiriya bingeha giring ku mîlyonan ragihîştinan bi dema xebitînê ya garantîkirî û scalability bi rê ve dibe.",
+          "features": [
+            "Ragihîştinên 10M+ li rojê",
+            "Garantiya SLA ya %99.99 dema xebitînê",
+            "Bingeh a scalinga otomatîk",
+            "Balanskirina barê ya pêşkeftî",
+            "Şopandina pergalê 7/24",
+            "Rizgarkirina karesatê û paşve"
+          ]
+        },
+        "cloudNative": {
+          "title": "Mîmariya Cloud-Native",
+          "description": "Bingeh a modern a li ser mikroservis ku li ser Kubernetes û teknolojiyên containerization ava bûyî.",
+          "features": [
+            "Orkestrayona Kubernetes",
+            "Containerization a Docker",
+            "Mîmariya mikroservisê",
+            "Sepandina service mesh",
+            "Deployment a cloud-agnostic",
+            "Infrastructure as Code (IaC)"
+          ]
+        },
+        "transformation": {
+          "title": "Veguherîna Dîjîtal a Korporatîf",
+          "description": "Stratejiya veguherîna dîjîtal a tevahî û sepandin ji bo nûvekirina pergala kevin.",
+          "features": [
+            "Nûvekirina pergala kevin",
+            "Şêwirmendiya stratejiya dîjîtal",
+            "Otomasyona pêvajoyên karsaziyê",
+            "Piştgiriya rêvebiriya guherînê",
+            "Plankirina rêçeya teknolojiyê",
+            "Analîz û optimîzasyona ROI"
+          ]
+        },
+        "devops": {
+          "title": "DevOps û Pipeline CI/CD",
+          "description": "Pratîkên DevOps ên pêşkeftî û xetên întegrasyonê/deploymentê yên domdar ji bo radestkirina nermalava bilez.",
+          "features": [
+            "Xetên deployment a otomatîk",
+            "Sazkirina întegrasyona domdar",
+            "Sepandina GitOps",
+            "Çarçoveyên testkirina otomatîk",
+            "Rêvebiriya guhertoyê",
+            "Şopandina bingehê"
+          ]
+        },
+        "security": {
+          "title": "Ewlehiya Korporatîf û Lihevhatî",
+          "description": "Çareseriyên ewlehiya tevahî ku standardên navneteweyî û pêdiviyên lihevhatina rêziknameyê bi cih tîne.",
+          "features": [
+            "Lihevhatina ISO 27001",
+            "Sertîfîkaya SOC 2 Type II",
+            "Parastina daneyan a GDPR",
+            "Testkirina penetrasyonê",
+            "Kontrolkirina ewlehiyê û nirxandin",
+            "Plankirina bersiva bûyeran"
+          ]
+        }
+      },
+      "process": {
+        "badge": "Pêvajoya Me",
+        "title": "Metodolojiya Radestkirina Selmandî",
+        "subtitle": "Nêzîkatiya me ya struktur kirî ji şêwirmendiya destpêkê heya piştgiriya domdar radestkirina projeya serkeftî garantî dike",
+        "steps": {
+          "discovery": {
+            "number": "01",
+            "title": "Keşfkirin û Analîz",
+            "description": "Nirxandina tevahî ya hewcedariyên karsaziya we, bingeha we ya teknîkî û armancên we yên stratejîk."
+          },
+          "strategy": {
+            "number": "02",
+            "title": "Stratejî û Mîmarî",
+            "description": "Sêwirana mîmariya pergala skalable û nexşeya rêya teknîkî ya tevahî ya li gor armancên karsaziyê."
+          },
+          "development": {
+            "number": "03",
+            "title": "Pêşkeftin û Întegrasyon",
+            "description": "Metodolojiya pêşkeftina agile bi întegrasyona domdar û protokolên garantiya kalîteya hişk."
+          },
+          "deployment": {
+            "number": "04",
+            "title": "Deployment û Optimîzasyon",
+            "description": "Deployment a bêkêmasî ya hilberînê bi optimîzasyona performansê, sazkirina şopandinê û piştgiriya domdar."
+          }
+        }
+      },
+      "cta": {
+        "title": "Amade ne Karsaziya Xwe Biguherînin?",
+        "subtitle": "Ka nîqaş bikin ka çareseriyên me yên nermalava korporatîf çawa dikarin rêwîtiya veguherîna dîjîtal a we bilez bikin",
+        "scheduleConsultation": "Şêwirmendiyê Plan Bike",
+        "emailUs": "E-nameyê Ji Me re Bişînin",
+        "trustBadge": "Ji aliyê 500+ xerîdarên korporatîf ên li çardora cîhanê ve tê bawer kirin • Sertîfîkaya ISO 27001 û SOC 2"
+      }
+    },
+    "about": {
+      "badge": "Derbarê Widdi",
+      "title": "Me Karsaziyên Cîhanî Xurt Dikin",
+      "subtitle": "Pêşkêşkara pêşeng a platformên SaaS ên bi zîrekiya destikî û çareseriyên rêvebiriya pergalên pîvanên bilind ji bo karsaziyên herî zehmet ên cîhanê",
+      "story": {
+        "title": "Çîroka Me",
+        "paragraph1": "Widdi bi vîzyona veguherandina pêşkeftina nermalava korporatîf hate damezrandin, wekî hevkarek teknolojiya pêbawer ji bo rêxistinên ku dixwazin rêwîtiyên xwe yên veguherîna dîjîtal bilez bikin derket.",
+        "paragraph2": "Em di avakirina pergalên giring de pisporên ku mîlyonan ragihîştinan li rojê pêvajo dikin dema ku garantiyên dema xebitînê yên pêşenga pîşesaziyê diparêzin. Pisporbûna me analîtîka bi zîrekiya destikî, mîmariyên cloud-native û pratîkên DevOps ên tevahî digire.",
+        "paragraph3": "Îro, em bi kêfxweşî karûbar ji 500+ xerîdarên korporatîf li 50+ welatan dikin, çareseriyên ku pêbaweriya teknîkî û pêbaweriya operasyonel kom dikin peyda dikin.",
+        "mission": {
+          "title": "Mîsyona Me",
+          "description": "Karsaziyan bi çareseriyên skalable ên bi zîrekiya destikî xurt bikin ku mezinbûna pîvanbar û pêbaweriya operasyonel peyda dike."
+        },
+        "vision": {
+          "title": "Dîtina Me",
+          "description": "Di rêvebiriya pergalên pîvanên bilind de standardên cîhanî diyar bike û bibe hevkara nermalava korporatîf a herî pêbawer a cîhanê."
+        }
+      },
+      "stats": {
+        "clients": {
+          "value": "500+",
+          "label": "Xerîdarên Korporatîf"
+        },
+        "uptime": {
+          "value": "%99.99",
+          "label": "Dema Xebitînê SLA"
+        },
+        "transactions": {
+          "value": "10M+",
+          "label": "Ragihîştinên Rojane"
+        },
+        "countries": {
+          "value": "50+",
+          "label": "Welat"
+        }
+      },
+      "values": {
+        "badge": "Nirxên Me",
+        "title": "Ew Çi Me Pêş Dibe",
+        "subtitle": "Nirxên me yên bingehîn her biryarek ku em didin û her çareseriyek ku em peyda dikin rêber dike",
+        "items": {
+          "excellence": {
+            "title": "Pêbaweriya Teknîkî",
+            "description": "Me bêdeng e ku çareseriyên nermalava standardên cîhanî yên li ser teknolojiyên herî dawî û pratîkên çêtirîn ên pîşesaziyê ava bûyî peyda bike."
+          },
+          "reliability": {
+            "title": "Pêbaweriya Operasyonel",
+            "description": "Bingeh a giring bi dema xebitînê ya garantîkirî temîn dike ku operasyonên karsaziya we 7/24/365 bêkêmasî bixebitin."
+          },
+          "innovation": {
+            "title": "Înovasyona Domdar",
+            "description": "Li pêşiya meylên teknolojiyê bimînin, çareseriyên xwe domdar pêşve bibin da ku dijwariyên sibê îro bi rû ve bikin."
+          },
+          "partnership": {
+            "title": "Hevkariya Xerîdar",
+            "description": "Pêwendiyên dirêj-dem bi ragihandinên zelal, piştgiriya taybet û serkeftina beşdarî ava bikin."
+          }
+        }
+      },
+      "certifications": {
+        "title": "Sertîfîka û Lihevhatî",
+        "subtitle": "Em standardên navneteweyî yên herî bilind ên ji bo ewlehiyê û parastina daneyan bi cih tînin",
+        "items": {
+          "iso": {
+            "title": "ISO 27001",
+            "description": "Rêvebiriya Ewlehiya Agahdariyê"
+          },
+          "soc": {
+            "title": "SOC 2 Type II",
+            "description": "Ewlehî û Berdestbûn"
+          },
+          "gdpr": {
+            "title": "Li Gorî GDPR",
+            "description": "Standardên Parastina Daneyan"
+          }
+        }
+      },
+      "cta": {
+        "title": "Amade ne Tiştekî Ecêb Ava Bikin?",
+        "subtitle": "Beşdarî 500+ xerîdarên korporatîf bibin ku ji bo xurtkirina veguherînên wan ên dîjîtal bi Widdi bawer dikin",
+        "startJourney": "Rêwîtiya Xwe Dest Pê Bike",
+        "exploreSolutions": "Çareseriyan Keşf Bike"
+      }
+    },
+    "footer": {
+      "description": "Çareseriyên nermalava asta korporatîf ên bi zîrekiya destikî ji bo karsaziyên cîhanî. Ji aliyê 500+ pargîdaniyan ve li çardora cîhanê tê bawer kirin.",
+      "solutions": "Çareserî",
+      "company": "Pargîdan",
+      "resources": "Çavkanî",
+      "legal": "Yasayî",
+      "newsletter": {
+        "title": "Nûve Bimînin",
+        "description": "Ji bo têgihîştinên korporatîf û nûvekirinên hilberê abone bibin bulletîna me.",
+        "placeholder": "email@pargidan.com",
+        "subscribe": "Abone Bibe"
+      },
+      "copyright": "© {year} Widdi. Hemû mafên parastî ne.",
+      "status": "Hemû pergal dixebitin",
+      "links": {
+        "aiSaas": "SaaS bi Zîrekiya Destikî",
+        "highVolume": "Pergalên Pîvanên Bilind",
+        "cloudArchitecture": "Mîmariya Cloud",
+        "digitalTransformation": "Veguherîna Dîjîtal",
+        "about": "Derbarê Me",
+        "careers": "Kar",
+        "contact": "Têkilî",
+        "partners": "Hevkar",
+        "documentation": "Belgekirinê",
+        "caseStudies": "Lêkolînên Rewşê",
+        "support": "Piştgirî",
+        "faq": "PPP",
+        "privacy": "Polîtîkaya Taybetiyê",
+        "terms": "Mercên Karûbarê",
+        "cookies": "Polîtîkaya Cookie",
+        "security": "Ewlehî"
+      }
+    },
+    "common": {
+      "loading": "Tê barkirin...",
+      "error": "Çewtî",
+      "success": "Serkeftî",
+      "close": "Bigire",
+      "learnMore": "Bêtir Hîn Bibe",
+      "readMore": "Bêtir Bixwîne",
+      "company": "Widdi"
+    }
+  }

@@ -24,12 +24,20 @@ export default function Error({
     }
   }, [error]);
 
+  const t = {
+    title: 'Something went wrong',
+    description: "We apologize for the inconvenience. Our team has been notified.",
+    tryAgain: 'Try Again',
+    homepage: 'Go to Homepage',
+    support: 'Need immediate assistance?',
+    contact: 'Contact Support →'
+  };
+
   return (
     <div className="min-h-screen bg-black flex items-center justify-center px-4">
       <div className="max-w-2xl mx-auto text-center">
         {/* Error Icon */}
         <motion.div
-          // avoid injecting initial inline styles during SSR
           initial={false}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -51,10 +59,10 @@ export default function Error({
         >
           <div>
             <h1 className="text-4xl font-bold text-white mb-4">
-              Something went wrong
+              {t.title}
             </h1>
             <p className="text-lg text-gray-400 font-light mb-2">
-              We apologize for the inconvenience. Our team has been notified.
+              {t.description}
             </p>
             {process.env.NODE_ENV === 'development' && (
               <div className="mt-4 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-left">
@@ -77,9 +85,9 @@ export default function Error({
               onClick={reset}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-purple-500/40 transition-all"
+              className="px-8 py-4 bg-linear-to-r from-blue-500 via-purple-500 to-cyan-500 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-purple-500/40 transition-all"
             >
-              Try Again
+              {t.tryAgain}
             </motion.button>
 
             <Link href="/">
@@ -89,16 +97,16 @@ export default function Error({
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-white/5 backdrop-blur-sm text-white rounded-lg font-semibold border border-white/20 hover:bg-white/10 hover:border-white/30 transition-all"
               >
-                Go to Homepage
+                {t.homepage}
               </motion.button>
             </Link>
           </div>
 
           {/* Support Link */}
           <div className="pt-8">
-            <p className="text-sm text-gray-500 mb-3">Need immediate assistance?</p>
+            <p className="text-sm text-gray-500 mb-3">{t.support}</p>
             <Link href="/contact" className="text-sm text-blue-400 hover:text-blue-300 transition-colors">
-              Contact Support →
+              {t.contact}
             </Link>
           </div>
         </motion.div>

@@ -1,0 +1,461 @@
+{
+  "navigation": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "getStarted": "Başlayın"
+  },
+  "hero": {
+    "badge": "Yapay Zeka Destekli Kurumsal Çözümler",
+    "title": {
+      "line1": "Yüksek Performanslı",
+      "line2": "Kurumsal Yazılım Çözümleri"
+    },
+    "description": "{company}, yapay zeka destekli SaaS platformları, yüksek hacimli sistem yönetimi ve küresel işletmelere profesyonel yazılım geliştirme hizmetleri sunmaktadır.",
+    "exploreSolutions": "Çözümleri Keşfedin",
+    "requestDemo": "Demo İsteyin",
+    "stats": {
+      "clients": "Kurumsal Müşteri",
+      "uptime": "Çalışma Süresi SLA",
+      "transactions": "İşlem/Gün",
+      "countries": "Küresel Ülke"
+    }
+  },
+  "solutions": {
+    "badge": "Temel Çözümler",
+    "title": "Kurumsal Yazılım Ekosistemi",
+    "subtitle": "Ölçeklenebilir, güvenli ve yapay zeka destekli yazılım çözümleriyle dijital altyapınızı güçlendirin",
+    "viewAll": "Tüm Çözümleri Görüntüle",
+    "items": {
+      "aiSaas": {
+        "title": "Yapay Zeka Destekli SaaS Platformu",
+        "description": "Yapay zeka ile desteklenen bulut tabanlı kurumsal yazılım çözümleri. Makine öğrenimi ve gelişmiş veri analitiği ile iş süreçlerinizi otomatikleştirin ve optimize edin."
+      },
+      "highVolume": {
+        "title": "Yüksek Hacimli Sistem Yönetimi",
+        "description": "Günde 10+ milyon işlem kapasitesi ve %99.99 çalışma süresi SLA. Otomatik ölçeklendirme, yük dengeleme ve 7/24 sistem izleme ile kesintisiz hizmet sunumu."
+      },
+      "transformation": {
+        "title": "Kurumsal Dijital Dönüşüm",
+        "description": "Uçtan uca dijital dönüşüm danışmanlığı ve uygulama. Eski sistem modernizasyonu, mikroservis mimarisi ve sorunsuz DevOps entegrasyonu."
+      }
+    }
+  },
+  "capabilities": {
+    "badge": "Teknik Mükemmellik",
+    "title": "Teknik Yeteneklerimiz",
+    "subtitle": "Modern yazılım mimarisi ve DevOps uygulamaları ile desteklenen yüksek performanslı, güvenli ve ölçeklenebilir sistemler",
+    "items": {
+      "cloudNative": {
+        "title": "Bulut-Yerel Mimari",
+        "description": "Kubernetes, Docker ve mikroservisler üzerine kurulu modern altyapı"
+      },
+      "analytics": {
+        "title": "Gelişmiş Analitik",
+        "description": "Gerçek zamanlı veri işleme ve tahmine dayalı analitik yetenekleri"
+      },
+      "security": {
+        "title": "Güvenlik Öncelikli",
+        "description": "ISO 27001, SOC 2 ve GDPR uyumlu güvenlik protokolleri"
+      },
+      "apiFirst": {
+        "title": "API-Öncelikli Tasarım",
+        "description": "RESTful ve GraphQL API'leri ile sorunsuz entegrasyon"
+      }
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "description": "İşletmeleri yapay zeka ve bulut teknolojileri ile rekabet avantajları sağlayarak güçlendirmek, büyümeyi destekleyen ölçeklenebilir yazılım çözümleri sunmak."
+    },
+    "vision": {
+      "title": "Vizyonumuz",
+      "description": "Küresel dijital dönüşümde lider teknoloji ortağı olmak, yüksek hacimli sistem mükemmeliyetinde dünya çapında standartlar belirlemek."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "description": "Teknik mükemmellik, operasyonel güvenilirlik, sürekli inovasyon ve müşteri odaklı çözümlere sarsılmaz bağlılık."
+    }
+  },
+  "contact": {
+    "badge": "Hadi Bağlanalım",
+    "title": "Dijital Dönüşümünüze Başlayın",
+    "subtitle": "Proje gereksinimlerinizi görüşmek ve Widdi'nin işinizi nasıl hızlandırabileceğini keşfetmek için kurumsal çözümler ekibimizle bağlantı kurun",
+    "pageTitle": "Bizimle Ortak Olun",
+    "pageSubtitle": "Kurumsal yazılım ihtiyaçlarınızı görüşmek için Widdi'nin uzman ekibiyle iletişime geçin. Birlikte özel çözümler geliştirelim.",
+    "form": {
+      "title": "Kurumsal Danışmanlık Talebi",
+      "subtitle": "Aşağıdaki formu doldurun, ekibimiz 24 saat içinde sizinle iletişime geçecek",
+      "name": {
+        "label": "Ad Soyad",
+        "placeholder": "Ahmet Yılmaz",
+        "required": "Ad gereklidir"
+      },
+      "email": {
+        "label": "İş E-postası",
+        "placeholder": "ahmet.yilmaz@sirket.com",
+        "required": "E-posta gereklidir",
+        "invalid": "Geçersiz e-posta adresi"
+      },
+      "company": {
+        "label": "Şirket Adı",
+        "placeholder": "Acme Şirketi",
+        "required": "Şirket adı gereklidir"
+      },
+      "phone": {
+        "label": "Telefon Numarası",
+        "placeholder": "+90 (555) 000-0000"
+      },
+      "service": {
+        "label": "Gerekli Çözüm",
+        "placeholder": "Bir çözüm seçin",
+        "required": "Lütfen bir çözüm seçin",
+        "options": {
+          "aiSaas": "Yapay Zeka Destekli SaaS Platformu",
+          "highVolume": "Yüksek Hacimli Sistem Yönetimi",
+          "cloudNative": "Bulut-Yerel Mimari",
+          "transformation": "Dijital Dönüşüm",
+          "devops": "DevOps ve CI/CD Pipeline",
+          "security": "Güvenlik ve Uyumluluk",
+          "consulting": "Kurumsal Danışmanlık"
+        }
+      },
+      "budget": {
+        "label": "Proje Bütçesi (USD)",
+        "placeholder": "Bütçe aralığı seçin",
+        "options": {
+          "50k-100k": "$50.000 - $100.000",
+          "100k-250k": "$100.000 - $250.000",
+          "250k-500k": "$250.000 - $500.000",
+          "500k+": "$500.000+",
+          "discuss": "Görüşmeyi tercih ediyorum"
+        }
+      },
+      "message": {
+        "label": "Proje Gereksinimleri",
+        "placeholder": "Lütfen proje kapsamınızı, teknik gereksinimlerinizi ve iş hedeflerinizi açıklayın...",
+        "required": "Lütfen proje gereksinimlerinizi açıklayın"
+      },
+      "submit": "Danışmanlık Talebini Gönder",
+      "submitting": "İşleniyor...",
+      "success": "Talep başarıyla gönderildi! Ekibimiz 24 saat içinde sizinle iletişime geçecek.",
+      "privacy": "Bu formu göndererek gizlilik politikamızı ve hizmet şartlarımızı kabul etmiş olursunuz"
+    },
+    "methods": {
+      "enterprise": {
+        "title": "Kurumsal E-posta",
+        "value": "enterprise@widdigroup.com",
+        "description": "7/24 Destek Mevcut"
+      },
+      "sales": {
+        "title": "Satış Sorguları",
+        "value": "sales@widdigroup.com",
+        "description": "İş Geliştirme Ekibi"
+      },
+      "global": {
+        "title": "Küresel Merkez",
+        "value": "San Francisco, CA",
+        "description": "50+ Ülkede Faaliyet"
+      },
+      "support": {
+        "title": "Teknik Destek",
+        "value": "support@widdigroup.com",
+        "description": "Altyapı ve Entegrasyon"
+      }
+    },
+    "benefits": {
+      "title": "Neden Widdi ile Ortak Olmalı?",
+      "items": {
+        "security": {
+          "title": "Kurumsal Düzeyde Güvenlik",
+          "description": "ISO 27001 ve SOC 2 sertifikalı altyapı"
+        },
+        "uptime": {
+          "title": "%99.99 Çalışma Süresi SLA",
+          "description": "Görev kritik güvenilirlik garantisi"
+        },
+        "support": {
+          "title": "Özel Destek Ekibi",
+          "description": "7/24/365 teknik yardım"
+        },
+        "track": {
+          "title": "Kanıtlanmış Başarı",
+          "description": "500+ başarılı kurumsal dağıtım"
+        }
+      }
+    },
+    "trust": {
+      "badge": "Dünya çapında 500+ kurumsal müşteri tarafından güvenilmektedir",
+      "certifications": {
+        "iso": {
+          "title": "ISO 27001",
+          "subtitle": "Sertifikalı"
+        },
+        "soc": {
+          "title": "SOC 2 Type II",
+          "subtitle": "Uyumlu"
+        },
+        "gdpr": {
+          "title": "GDPR",
+          "subtitle": "Uyumlu"
+        }
+      }
+    },
+    "email": {
+      "title": "Kurumsal E-posta",
+      "value": "enterprise@widdigroup.com",
+      "support": "7/24 Destek"
+    },
+    "global": {
+      "title": "Küresel Varlık",
+      "value": "50+ Ülke",
+      "coverage": "Dünya Çapında Kapsama"
+    },
+    "schedule": "Danışmanlık Planla",
+    "supportInfo": "⚡ Kurumsal destek 7/24/365 kullanılabilir • SLA garantili",
+    "certifications": {
+      "iso": "ISO 27001",
+      "soc": "SOC 2 Type II",
+      "gdpr": "GDPR Uyumlu"
+    }
+  },
+  "services": {
+    "badge": "Kurumsal Çözümler",
+    "title": "Profesyonel Yazılım Hizmetleri",
+    "subtitle": "Dijital dönüşümü hızlandırmak ve operasyonel mükemmelliği sağlamak için tasarlanmış kapsamlı kurumsal yazılım çözümleri",
+    "items": {
+      "aiSaas": {
+        "title": "Yapay Zeka Destekli SaaS Platformu",
+        "description": "Yapay zeka ve makine öğrenimi algoritmaları ile desteklenen kurumsal düzeyde bulut yazılım çözümleri.",
+        "features": [
+          "Çok kiracılı mimari",
+          "Yapay zeka destekli analitik ve içgörüler",
+          "Gerçek zamanlı veri işleme",
+          "Otomatik iş akışı optimizasyonu",
+          "Tahmine dayalı modelleme ve tahminleme",
+          "Özel API geliştirme"
+        ]
+      },
+      "highVolume": {
+        "title": "Yüksek Hacimli Sistem Yönetimi",
+        "description": "Garantili çalışma süresi ve ölçeklenebilirlik ile milyonlarca işlemi yöneten kritik altyapı yönetimi.",
+        "features": [
+          "Günde 10M+ işlem",
+          "%99.99 çalışma süresi SLA garantisi",
+          "Otomatik ölçeklendirme altyapısı",
+          "Gelişmiş yük dengeleme",
+          "7/24 sistem izleme",
+          "Felaket kurtarma ve yedekleme"
+        ]
+      },
+      "cloudNative": {
+        "title": "Bulut-Yerel Mimari",
+        "description": "Kubernetes ve konteynerleştirme teknolojileri üzerine kurulu modern mikroservis tabanlı altyapı.",
+        "features": [
+          "Kubernetes orkestrasyon",
+          "Docker konteynerleştirme",
+          "Mikroservis mimarisi",
+          "Servis ağı uygulaması",
+          "Bulut-bağımsız dağıtım",
+          "Kod Olarak Altyapı (IaC)"
+        ]
+      },
+      "transformation": {
+        "title": "Kurumsal Dijital Dönüşüm",
+        "description": "Eski sistem modernizasyonu için kapsamlı dijital dönüşüm stratejisi ve uygulaması.",
+        "features": [
+          "Eski sistem modernizasyonu",
+          "Dijital strateji danışmanlığı",
+          "İş süreci otomasyonu",
+          "Değişim yönetimi desteği",
+          "Teknoloji yol haritası planlama",
+          "ROI analizi ve optimizasyon"
+        ]
+      },
+      "devops": {
+        "title": "DevOps ve CI/CD Pipeline",
+        "description": "Hızlı yazılım teslimatı için gelişmiş DevOps uygulamaları ve sürekli entegrasyon/dağıtım hatları.",
+        "features": [
+          "Otomatik dağıtım hatları",
+          "Sürekli entegrasyon kurulumu",
+          "GitOps uygulaması",
+          "Otomatik test çerçeveleri",
+          "Sürüm yönetimi",
+          "Altyapı izleme"
+        ]
+      },
+      "security": {
+        "title": "Kurumsal Güvenlik ve Uyumluluk",
+        "description": "Uluslararası standartları ve düzenleyici uyumluluk gereksinimlerini karşılayan kapsamlı güvenlik çözümleri.",
+        "features": [
+          "ISO 27001 uyumluluğu",
+          "SOC 2 Type II sertifikasyonu",
+          "GDPR veri koruma",
+          "Penetrasyon testi",
+          "Güvenlik denetimi ve değerlendirme",
+          "Olay müdahale planlaması"
+        ]
+      }
+    },
+    "process": {
+      "badge": "Sürecimiz",
+      "title": "Kanıtlanmış Teslimat Metodolojisi",
+      "subtitle": "Yapılandırılmış yaklaşımımız, ilk danışmanlıktan devam eden desteğe kadar başarılı proje teslimatı sağlar",
+      "steps": {
+        "discovery": {
+          "number": "01",
+          "title": "Keşif ve Analiz",
+          "description": "İş gereksinimleriniz, teknik altyapınız ve stratejik hedeflerinizin kapsamlı değerlendirmesi."
+        },
+        "strategy": {
+          "number": "02",
+          "title": "Strateji ve Mimari",
+          "description": "İş hedefleri ile uyumlu ölçeklenebilir sistem mimarisi ve kapsamlı teknik yol haritası tasarımı."
+        },
+        "development": {
+          "number": "03",
+          "title": "Geliştirme ve Entegrasyon",
+          "description": "Sürekli entegrasyon ve titiz kalite güvence protokolleri ile çevik geliştirme metodolojisi."
+        },
+        "deployment": {
+          "number": "04",
+          "title": "Dağıtım ve Optimizasyon",
+          "description": "Performans optimizasyonu, izleme kurulumu ve devam eden destek ile sorunsuz üretim dağıtımı."
+        }
+      }
+    },
+    "cta": {
+      "title": "İşinizi Dönüştürmeye Hazır mısınız?",
+      "subtitle": "Kurumsal yazılım çözümlerimizin dijital dönüşüm yolculuğunuzu nasıl hızlandırabileceğini konuşalım",
+      "scheduleConsultation": "Danışmanlık Planla",
+      "emailUs": "Bize E-posta Gönderin",
+      "trustBadge": "Dünya çapında 500+ kurumsal müşteri tarafından güvenilmektedir • ISO 27001 ve SOC 2 sertifikalı"
+    }
+  },
+  "about": {
+    "badge": "Widdi Hakkında",
+    "title": "Küresel İşletmeleri Güçlendiriyoruz",
+    "subtitle": "Dünyanın en zorlu işletmeleri için yapay zeka destekli SaaS platformları ve yüksek hacimli sistem yönetimi çözümlerinde lider sağlayıcı",
+    "story": {
+      "title": "Hikayemiz",
+      "paragraph1": "Kurumsal yazılım geliştirmeyi dönüştürme vizyonuyla kurulan Widdi, dijital dönüşüm yolculuklarını hızlandırmak isteyen organizasyonlar için güvenilir bir teknoloji ortağı olarak ortaya çıkmıştır.",
+      "paragraph2": "Endüstri lideri çalışma süresi garantilerini korurken günlük milyonlarca işlemi işleyen kritik sistemler inşa etme konusunda uzmanız. Uzmanlığımız yapay zeka destekli analitik, bulut-yerel mimariler ve kapsamlı DevOps uygulamalarını kapsar.",
+      "paragraph3": "Bugün, teknik mükemmellik ve operasyonel güvenilirliği birleştiren çözümler sunarak 50+ ülkede 500+ kurumsal müşteriye gururla hizmet veriyoruz.",
+      "mission": {
+        "title": "Misyonumuz",
+        "description": "İşletmeleri ölçülebilir büyüme ve operasyonel mükemmellik sağlayan ölçeklenebilir, yapay zeka destekli çözümlerle güçlendirmek."
+      },
+      "vision": {
+        "title": "Vizyonumuz",
+        "description": "Yüksek hacimli sistem yönetiminde küresel standartlar belirlemek ve dünyanın en güvenilir kurumsal yazılım ortağı olmak."
+      }
+    },
+    "stats": {
+      "clients": {
+        "value": "500+",
+        "label": "Kurumsal Müşteri"
+      },
+      "uptime": {
+        "value": "%99.99",
+        "label": "Çalışma Süresi SLA"
+      },
+      "transactions": {
+        "value": "10M+",
+        "label": "Günlük İşlem"
+      },
+      "countries": {
+        "value": "50+",
+        "label": "Küresel Ülke"
+      }
+    },
+    "values": {
+      "badge": "Değerlerimiz",
+      "title": "Bizi İleriye Taşıyan Şey",
+      "subtitle": "Temel değerlerimiz verdiğimiz her kararı ve sunduğumuz her çözümü yönlendirir",
+      "items": {
+        "excellence": {
+          "title": "Teknik Mükemmellik",
+          "description": "En son teknolojiler ve endüstri en iyi uygulamaları üzerine inşa edilmiş dünya standartlarında yazılım çözümleri sunmaya kararlıyız."
+        },
+        "reliability": {
+          "title": "Operasyonel Güvenilirlik",
+          "description": "Garantili çalışma süresi ile kritik altyapı, iş operasyonlarınızın 7/24/365 sorunsuz çalışmasını sağlar."
+        },
+        "innovation": {
+          "title": "Sürekli İnovasyon",
+          "description": "Teknoloji trendlerinin önünde kalarak, yarının zorluklarını bugünden karşılamak için çözümlerimizi sürekli geliştiriyoruz."
+        },
+        "partnership": {
+          "title": "Müşteri Ortaklığı",
+          "description": "Şeffaf iletişim, özel destek ve paylaşılan başarı yoluyla uzun vadeli ilişkiler kurmak."
+        }
+      }
+    },
+    "certifications": {
+      "title": "Sertifikalar ve Uyumluluk",
+      "subtitle": "Güvenlik ve veri koruma için en yüksek uluslararası standartları karşılıyoruz",
+      "items": {
+        "iso": {
+          "title": "ISO 27001",
+          "description": "Bilgi Güvenliği Yönetimi"
+        },
+        "soc": {
+          "title": "SOC 2 Type II",
+          "description": "Güvenlik ve Kullanılabilirlik"
+        },
+        "gdpr": {
+          "title": "GDPR Uyumlu",
+          "description": "Veri Koruma Standartları"
+        }
+      }
+    },
+    "cta": {
+      "title": "Harika Bir Şeyler İnşa Etmeye Hazır mısınız?",
+      "subtitle": "Dijital dönüşümlerini güçlendirmek için Widdi'ye güvenen 500+ kurumsal müşteriye katılın",
+      "startJourney": "Yolculuğunuza Başlayın",
+      "exploreSolutions": "Çözümleri Keşfedin"
+    }
+  },
+  "footer": {
+    "description": "Küresel işletmeler için kurumsal düzeyde yapay zeka destekli yazılım çözümleri. Dünya çapında 500+ şirket tarafından güvenilmektedir.",
+    "solutions": "Çözümler",
+    "company": "Şirket",
+    "resources": "Kaynaklar",
+    "legal": "Yasal",
+    "newsletter": {
+      "title": "Güncel Kalın",
+      "description": "Kurumsal içgörüler ve ürün güncellemeleri için bültenimize abone olun.",
+      "placeholder": "email@sirket.com",
+      "subscribe": "Abone Ol"
+    },
+    "copyright": "© {year} Widdi. Tüm hakları saklıdır.",
+    "status": "Tüm sistemler çalışıyor",
+    "links": {
+      "aiSaas": "Yapay Zeka Destekli SaaS",
+      "highVolume": "Yüksek Hacimli Sistemler",
+      "cloudArchitecture": "Bulut Mimarisi",
+      "digitalTransformation": "Dijital Dönüşüm",
+      "about": "Hakkımızda",
+      "careers": "Kariyer",
+      "contact": "İletişim",
+      "partners": "Ortaklar",
+      "documentation": "Dokümantasyon",
+      "caseStudies": "Vaka Çalışmaları",
+      "support": "Destek",
+      "faq": "SSS",
+      "privacy": "Gizlilik Politikası",
+      "terms": "Hizmet Şartları",
+      "cookies": "Çerez Politikası",
+      "security": "Güvenlik"
+    }
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "close": "Kapat",
+    "learnMore": "Daha Fazla Bilgi",
+    "readMore": "Devamını Oku",
+    "company": "Widdi"
+  }
+}

@@ -38,7 +38,7 @@ export default function GlobalError({
             </p>
             <button
               onClick={reset}
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold shadow-lg"
+              className="px-8 py-4 bg-linear-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold shadow-lg"
             >
               Try Again
             </button>
