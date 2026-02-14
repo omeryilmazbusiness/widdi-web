@@ -220,9 +220,9 @@
       }
     },
     "services": {
-      "badge": "Çareseriyên Korporatîf",
-      "title": "Karûbarên Nermalava Profesyonel",
-      "subtitle": "Çareseriyên tevahî yên nermalava korporatîf ên ji bo bilez kirina veguherîna dîjîtal û temînkirina pêbaweriya operasyonel hate sêwirandin",
+      "badge": "Karûbarên Me",
+      "title": "Çareseriyên Daहîner û Teknolojiyê",
+      "subtitle": "Ji nermalava bi zîrekiya destikî heya çîrokbêjiya dahîner, em vîzyona markaya we vedigerînin ceribandinên dîjîtal ên hêzdar",
       "items": {
         "aiSaas": {
           "title": "Platforma SaaS a bi Zîrekiya Destikî",
@@ -236,100 +236,100 @@
             "Pêşkeftina API ya taybet"
           ]
         },
-        "highVolume": {
-          "title": "Rêvebiriya Pergalên Pîvanên Bilind",
-          "description": "Rêvebiriya bingeha giring ku mîlyonan ragihîştinan bi dema xebitînê ya garantîkirî û scalability bi rê ve dibe.",
+        "branding": {
+          "title": "Marka û Stûdyoya Dahîner",
+          "description": "Nasnameya markaya xwe diyar bikin û fikiran vedigerînin ceribandinên dîtbar û dahîner ên hêzdar.",
           "features": [
-            "Ragihîştinên 10M+ li rojê",
-            "Garantiya SLA ya %99.99 dema xebitînê",
-            "Bingeh a scalinga otomatîk",
-            "Balanskirina barê ya pêşkeftî",
-            "Şopandina pergalê 7/24",
-            "Rizgarkirina karesatê û paşve"
+            "Stratejiya markayê û cîhgirtin",
+            "Nasnameya dîtbar (logo, rêber)",
+            "Pêşkeftina kampanyaya dahîner",
+            "Nivîsandina tekstan û peyaman",
+            "Sêwirana materyalên marketîngê",
+            "Çîrokbêjiya markayê"
           ]
         },
-        "cloudNative": {
-          "title": "Mîmariya Cloud-Native",
-          "description": "Bingeh a modern a li ser mikroservis ku li ser Kubernetes û teknolojiyên containerization ava bûyî.",
+        "socialMedia": {
+          "title": "Rêvebiriya Medyaya Civakî",
+          "description": "Bi naverokên stratejîk û rêvebiriya civakê re li Facebook, Instagram, X û LinkedIn bi temaşevanên xwe re têkilî daynin.",
           "features": [
-            "Orkestrayona Kubernetes",
-            "Containerization a Docker",
-            "Mîmariya mikroservisê",
-            "Sepandina service mesh",
-            "Deployment a cloud-agnostic",
-            "Infrastructure as Code (IaC)"
+            "Plansazî û rêvebiriya medyaya civakî",
+            "Çêkirina naverokê û curation",
+            "Şopandina analîtîk û performansê",
+            "Rêvebiriya civakê (peyam, şîrove)",
+            "Rêvebiriya medya û reklaman a firotî",
+            "Kampanyayên marketînga e-nameyê"
           ]
         },
-        "transformation": {
-          "title": "Veguherîna Dîjîtal a Korporatîf",
-          "description": "Stratejiya veguherîna dîjîtal a tevahî û sepandin ji bo nûvekirina pergala kevin.",
+        "videoProduction": {
+          "title": "Hilberîna Vîdyo û Lihevhatinê",
+          "description": "Bi hilberîna vîdyoyê ya profesyonel û grafîkên lihevhatinê çîrokên dîtbar ên balkêş biafirînin.",
           "features": [
-            "Nûvekirina pergala kevin",
-            "Şêwirmendiya stratejiya dîjîtal",
-            "Otomasyona pêvajoyên karsaziyê",
-            "Piştgiriya rêvebiriya guherînê",
-            "Plankirina rêçeya teknolojiyê",
-            "Analîz û optimîzasyona ROI"
+            "Fîlmên markayê û reklaman",
+            "Vîdyoyên kurt (Reels, TikTok, Shorts)",
+            "Grafîkên lihevhatinê û anîmasyon",
+            "Guherandina vîdyoyê û piştî-hilberînê",
+            "Naverokên vîdyoyê yên medyaya civakî",
+            "Hilberîna vîdyoyê ya korporatîf"
           ]
         },
-        "devops": {
-          "title": "DevOps û Pipeline CI/CD",
-          "description": "Pratîkên DevOps ên pêşkeftî û xetên întegrasyonê/deploymentê yên domdar ji bo radestkirina nermalava bilez.",
+        "digitalMarketing": {
+          "title": "Marketînga Dîjîtal û SEO",
+          "description": "Bi optimîzasyona motora lêgerînê ya stratejîk, marketînga naverokê û kampanyayên Google Ads mezinbûnê bilez bikin.",
           "features": [
-            "Xetên deployment a otomatîk",
-            "Sazkirina întegrasyona domdar",
-            "Sepandina GitOps",
-            "Çarçoveyên testkirina otomatîk",
-            "Rêvebiriya guhertoyê",
-            "Şopandina bingehê"
+            "SEO (Optimîzasyona Motora Lêgerînê)",
+            "Rêvebiriya SEM / Google Ads",
+            "Stratejiya marketînga naverokê",
+            "Gotarên blogê û nivîsandina tekstan",
+            "Lêgerîna peyvên sereke û optimîzasyon",
+            "Analîza performansê û ragihandin"
           ]
         },
-        "security": {
-          "title": "Ewlehiya Korporatîf û Lihevhatî",
-          "description": "Çareseriyên ewlehiya tevahî ku standardên navneteweyî û pêdiviyên lihevhatina rêziknameyê bi cih tîne.",
+        "webDesign": {
+          "title": "Sêwirana Webê û Dîjîtal",
+          "description": "Sêwirana malpera modern a navendî ya bikarhêner û ceribandinên dîjîtal ku mêvanan vedigerîne xerîdar.",
           "features": [
-            "Lihevhatina ISO 27001",
-            "Sertîfîkaya SOC 2 Type II",
-            "Parastina daneyan a GDPR",
-            "Testkirina penetrasyonê",
-            "Kontrolkirina ewlehiyê û nirxandin",
-            "Plankirina bersiva bûyeran"
+            "Sêwirana malpera (UI/UX)",
+            "Optimîzasyona rûpela destpêkê",
+            "Ceribandinên înteraktîf",
+            "Sêwirana responsive (mobîl-pêşîn)",
+            "Sêwirana pêşkêşkirinê",
+            "Hêmanên dahîner ên dîjîtal"
           ]
         }
       },
       "process": {
         "badge": "Pêvajoya Me",
-        "title": "Metodolojiya Radestkirina Selmandî",
-        "subtitle": "Nêzîkatiya me ya struktur kirî ji şêwirmendiya destpêkê heya piştgiriya domdar radestkirina projeya serkeftî garantî dike",
+        "title": "Çawa Em Dixebitin",
+        "subtitle": "Metodolojiya me ya selmandî ji têgihîştinê heya bicîhkirinê radestkirina serkeftî temîn dike",
         "steps": {
           "discovery": {
             "number": "01",
-            "title": "Keşfkirin û Analîz",
-            "description": "Nirxandina tevahî ya hewcedariyên karsaziya we, bingeha we ya teknîkî û armancên we yên stratejîk."
+            "title": "Keşfkirin û Stratejî",
+            "description": "Têgihîştina markaya we, temaşevanên we û armancên we ji bo çêkirina stratejiyeke taybet."
           },
-          "strategy": {
+          "creative": {
             "number": "02",
-            "title": "Stratejî û Mîmarî",
-            "description": "Sêwirana mîmariya pergala skalable û nexşeya rêya teknîkî ya tevahî ya li gor armancên karsaziyê."
+            "title": "Pêşkeftina Dahîner",
+            "description": "Sêwirandina têgihîştinan, dîtbaran û naverokê ku bi nasnameya markaya we re têkildar e."
           },
-          "development": {
+          "execution": {
             "number": "03",
-            "title": "Pêşkeftin û Întegrasyon",
-            "description": "Metodolojiya pêşkeftina agile bi întegrasyona domdar û protokolên garantiya kalîteya hişk."
+            "title": "Bicîhkirin û Hilberîn",
+            "description": "Fîkiran bi baldariya hûrgulî li hûrguliyan û kalîteyê zindî bikin."
           },
-          "deployment": {
+          "optimization": {
             "number": "04",
-            "title": "Deployment û Optimîzasyon",
-            "description": "Deployment a bêkêmasî ya hilberînê bi optimîzasyona performansê, sazkirina şopandinê û piştgiriya domdar."
+            "title": "Destpêkirin û Optimîzasyon",
+            "description": "Kampanyayan belave bikin û li gorî daneyên performansê domdar optimize bikin."
           }
         }
       },
       "cta": {
-        "title": "Amade ne Karsaziya Xwe Biguherînin?",
-        "subtitle": "Ka nîqaş bikin ka çareseriyên me yên nermalava korporatîf çawa dikarin rêwîtiya veguherîna dîjîtal a we bilez bikin",
+        "title": "Amade ne Markaya Xwe Bilind Bikin?",
+        "subtitle": "Ka pêkve tiştekî awarte biafirînin. Ji têgihîştinên dahîner heya bicîhkirina teknîkî, em li vir in da ku alîkariyê bikin.",
         "scheduleConsultation": "Şêwirmendiyê Plan Bike",
         "emailUs": "E-nameyê Ji Me re Bişînin",
-        "trustBadge": "Ji aliyê 500+ xerîdarên korporatîf ên li çardora cîhanê ve tê bawer kirin • Sertîfîkaya ISO 27001 û SOC 2"
+        "trustBadge": "Ji aliyê 500+ markan ve li çardora cîhanê tê bawer kirin • Pêbaweriya dahîner bi nûvekirina teknîkî re tê hev"
       }
     },
     "about": {

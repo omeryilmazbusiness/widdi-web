@@ -220,9 +220,9 @@
     }
   },
   "services": {
-    "badge": "Kurumsal Çözümler",
-    "title": "Profesyonel Yazılım Hizmetleri",
-    "subtitle": "Dijital dönüşümü hızlandırmak ve operasyonel mükemmelliği sağlamak için tasarlanmış kapsamlı kurumsal yazılım çözümleri",
+    "badge": "Hizmetlerimiz",
+    "title": "Yaratıcı ve Teknoloji Çözümleri",
+    "subtitle": "Yapay zeka destekli yazılımdan yaratıcı hikaye anlatımına, markanızın vizyonunu güçlü dijital deneyimlere dönüştürüyoruz",
     "items": {
       "aiSaas": {
         "title": "Yapay Zeka Destekli SaaS Platformu",
@@ -236,100 +236,100 @@
           "Özel API geliştirme"
         ]
       },
-      "highVolume": {
-        "title": "Yüksek Hacimli Sistem Yönetimi",
-        "description": "Garantili çalışma süresi ve ölçeklenebilirlik ile milyonlarca işlemi yöneten kritik altyapı yönetimi.",
+      "branding": {
+        "title": "Marka ve Yaratıcı Stüdyo",
+        "description": "Markanızın kimliğini tanımlayın ve fikirleri güçlü görsel ve yaratıcı deneyimlere dönüştürün.",
         "features": [
-          "Günde 10M+ işlem",
-          "%99.99 çalışma süresi SLA garantisi",
-          "Otomatik ölçeklendirme altyapısı",
-          "Gelişmiş yük dengeleme",
-          "7/24 sistem izleme",
-          "Felaket kurtarma ve yedekleme"
+          "Marka stratejisi ve konumlandırma",
+          "Görsel kimlik (logo, rehberler)",
+          "Yaratıcı kampanya geliştirme",
+          "Metin yazarlığı ve mesajlaşma",
+          "Pazarlama materyalleri tasarımı",
+          "Marka hikayesi anlatımı"
         ]
       },
-      "cloudNative": {
-        "title": "Bulut-Yerel Mimari",
-        "description": "Kubernetes ve konteynerleştirme teknolojileri üzerine kurulu modern mikroservis tabanlı altyapı.",
+      "socialMedia": {
+        "title": "Sosyal Medya Yönetimi",
+        "description": "Stratejik içerik ve topluluk yönetimi ile Facebook, Instagram, X ve LinkedIn'de kitlenizle etkileşim kurun.",
         "features": [
-          "Kubernetes orkestrasyon",
-          "Docker konteynerleştirme",
-          "Mikroservis mimarisi",
-          "Servis ağı uygulaması",
-          "Bulut-bağımsız dağıtım",
-          "Kod Olarak Altyapı (IaC)"
+          "Sosyal medya planlama ve yönetim",
+          "İçerik oluşturma ve kürasyon",
+          "Analitik ve performans takibi",
+          "Topluluk yönetimi (DM, yorumlar)",
+          "Ücretli sosyal ve reklam yönetimi",
+          "E-posta pazarlama kampanyaları"
         ]
       },
-      "transformation": {
-        "title": "Kurumsal Dijital Dönüşüm",
-        "description": "Eski sistem modernizasyonu için kapsamlı dijital dönüşüm stratejisi ve uygulaması.",
+      "videoProduction": {
+        "title": "Video ve Hareket Prodüksiyonu",
+        "description": "Profesyonel video prodüksiyonu ve hareket grafikleri ile etkileyici görsel hikayeler yaratın.",
         "features": [
-          "Eski sistem modernizasyonu",
-          "Dijital strateji danışmanlığı",
-          "İş süreci otomasyonu",
-          "Değişim yönetimi desteği",
-          "Teknoloji yol haritası planlama",
-          "ROI analizi ve optimizasyon"
+          "Marka filmleri ve reklamlar",
+          "Kısa format videolar (Reels, TikTok, Shorts)",
+          "Hareket grafikleri ve animasyon",
+          "Video düzenleme ve post-prodüksiyon",
+          "Sosyal medya video içerikleri",
+          "Kurumsal video prodüksiyonu"
         ]
       },
-      "devops": {
-        "title": "DevOps ve CI/CD Pipeline",
-        "description": "Hızlı yazılım teslimatı için gelişmiş DevOps uygulamaları ve sürekli entegrasyon/dağıtım hatları.",
+      "digitalMarketing": {
+        "title": "Dijital Pazarlama ve SEO",
+        "description": "Stratejik arama motoru optimizasyonu, içerik pazarlaması ve Google Ads kampanyaları ile büyümeyi hızlandırın.",
         "features": [
-          "Otomatik dağıtım hatları",
-          "Sürekli entegrasyon kurulumu",
-          "GitOps uygulaması",
-          "Otomatik test çerçeveleri",
-          "Sürüm yönetimi",
-          "Altyapı izleme"
+          "SEO (Arama Motoru Optimizasyonu)",
+          "SEM / Google Ads yönetimi",
+          "İçerik pazarlama stratejisi",
+          "Blog makaleleri ve metin yazarlığı",
+          "Anahtar kelime araştırma ve optimizasyon",
+          "Performans analizi ve raporlama"
         ]
       },
-      "security": {
-        "title": "Kurumsal Güvenlik ve Uyumluluk",
-        "description": "Uluslararası standartları ve düzenleyici uyumluluk gereksinimlerini karşılayan kapsamlı güvenlik çözümleri.",
+      "webDesign": {
+        "title": "Web ve Dijital Tasarım",
+        "description": "Ziyaretçileri müşterilere dönüştüren modern, kullanıcı odaklı web sitesi ve dijital deneyim tasarımı.",
         "features": [
-          "ISO 27001 uyumluluğu",
-          "SOC 2 Type II sertifikasyonu",
-          "GDPR veri koruma",
-          "Penetrasyon testi",
-          "Güvenlik denetimi ve değerlendirme",
-          "Olay müdahale planlaması"
+          "Web sitesi tasarımı (UI/UX)",
+          "Açılış sayfası optimizasyonu",
+          "İnteraktif deneyimler",
+          "Responsive tasarım (mobil öncelikli)",
+          "Sunum tasarımı",
+          "Dijital yaratıcı varlıklar"
         ]
       }
     },
     "process": {
       "badge": "Sürecimiz",
-      "title": "Kanıtlanmış Teslimat Metodolojisi",
-      "subtitle": "Yapılandırılmış yaklaşımımız, ilk danışmanlıktan devam eden desteğe kadar başarılı proje teslimatı sağlar",
+      "title": "Nasıl Çalışıyoruz",
+      "subtitle": "Kanıtlanmış metodolojimiz, konseptten uygulamaya başarılı teslimat sağlar",
       "steps": {
         "discovery": {
           "number": "01",
-          "title": "Keşif ve Analiz",
-          "description": "İş gereksinimleriniz, teknik altyapınız ve stratejik hedeflerinizin kapsamlı değerlendirmesi."
+          "title": "Keşif ve Strateji",
+          "description": "Markanızı, kitlenizi ve hedeflerinizi anlayarak özel bir strateji oluşturuyoruz."
         },
-        "strategy": {
+        "creative": {
           "number": "02",
-          "title": "Strateji ve Mimari",
-          "description": "İş hedefleri ile uyumlu ölçeklenebilir sistem mimarisi ve kapsamlı teknik yol haritası tasarımı."
+          "title": "Yaratıcı Geliştirme",
+          "description": "Marka kimliğinizle uyumlu konseptler, görseller ve içerik tasarlıyoruz."
         },
-        "development": {
+        "execution": {
           "number": "03",
-          "title": "Geliştirme ve Entegrasyon",
-          "description": "Sürekli entegrasyon ve titiz kalite güvence protokolleri ile çevik geliştirme metodolojisi."
+          "title": "Uygulama ve Prodüksiyon",
+          "description": "Fikirleri detaylara ve kaliteye titizlikle dikkat ederek hayata geçiriyoruz."
         },
-        "deployment": {
+        "optimization": {
           "number": "04",
-          "title": "Dağıtım ve Optimizasyon",
-          "description": "Performans optimizasyonu, izleme kurulumu ve devam eden destek ile sorunsuz üretim dağıtımı."
+          "title": "Yayınlama ve Optimizasyon",
+          "description": "Kampanyaları dağıtıyor ve performans verilerine göre sürekli optimize ediyoruz."
         }
       }
     },
     "cta": {
-      "title": "İşinizi Dönüştürmeye Hazır mısınız?",
-      "subtitle": "Kurumsal yazılım çözümlerimizin dijital dönüşüm yolculuğunuzu nasıl hızlandırabileceğini konuşalım",
+      "title": "Markanızı Yükseltmeye Hazır mısınız?",
+      "subtitle": "Birlikte olağanüstü bir şeyler yaratalım. Yaratıcı konseptlerden teknik uygulamaya, size yardımcı olmak için buradayız.",
       "scheduleConsultation": "Danışmanlık Planla",
       "emailUs": "Bize E-posta Gönderin",
-      "trustBadge": "Dünya çapında 500+ kurumsal müşteri tarafından güvenilmektedir • ISO 27001 ve SOC 2 sertifikalı"
+      "trustBadge": "Dünya çapında 500+ marka tarafından güvenilmektedir • Yaratıcı mükemmellik teknik inovasyonla buluşuyor"
     }
   },
   "about": {

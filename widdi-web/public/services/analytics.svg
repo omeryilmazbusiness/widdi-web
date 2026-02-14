@@ -1,0 +1,23 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="analytics-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#0f172a"/>
+  <path d="M80 220 L80 200 L100 200 L100 220 Z" fill="#10b981" opacity="0.6"/>
+  <path d="M120 220 L120 160 L140 160 L140 220 Z" fill="#10b981" opacity="0.7"/>
+  <path d="M160 220 L160 140 L180 140 L180 220 Z" fill="#06b6d4" opacity="0.6"/>
+  <path d="M200 220 L200 120 L220 120 L220 220 Z" fill="#06b6d4" opacity="0.7"/>
+  <path d="M240 220 L240 100 L260 100 L260 220 Z" fill="#3b82f6" opacity="0.6"/>
+  <path d="M280 220 L280 80 L300 80 L300 220 Z" fill="#3b82f6" opacity="0.7"/>
+  <path d="M90 200 L130 160 L170 140 L210 120 L250 100 L290 80" stroke="#10b981" stroke-width="3" fill="none" opacity="0.5"/>
+  <circle cx="90" cy="200" r="5" fill="#10b981"/>
+  <circle cx="130" cy="160" r="5" fill="#06b6d4"/>
+  <circle cx="170" cy="140" r="5" fill="#06b6d4"/>
+  <circle cx="210" cy="120" r="5" fill="#3b82f6"/>
+  <circle cx="250" cy="100" r="5" fill="#3b82f6"/>
+  <circle cx="290" cy="80" r="5" fill="#3b82f6"/>
+</svg>
