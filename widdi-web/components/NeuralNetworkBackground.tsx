@@ -50,11 +50,11 @@ export default function NeuralNetworkBackground({
 
   // Configuration based on intensity and device
   const config = {
-    particleCount: isMobile ? 60 : intensity === 'low' ? 100 : intensity === 'high' ? 200 : 140,
-    connectionDistance: isMobile ? 130 : 180,
-    particleSpeed: reducedMotion ? 0 : isMobile ? 0.4 : 0.6,
-    parallaxStrength: isMobile ? 0 : 20,
-    maxConnections: isMobile ? 4 : 6,
+    particleCount: isMobile ? 40 : intensity === 'low' ? 60 : intensity === 'high' ? 120 : 80,
+    connectionDistance: isMobile ? 120 : 150,
+    particleSpeed: reducedMotion ? 0 : isMobile ? 0.3 : 0.5,
+    parallaxStrength: isMobile ? 0 : 15,
+    maxConnections: isMobile ? 3 : 4,
   };
 
   // Initialize particles
@@ -151,17 +151,17 @@ export default function NeuralNetworkBackground({
       const drawY = particle.y + offsetY;
 
       // Calculate size and opacity based on depth
-      const scale = 0.6 + particle.z * 0.5; // 0.6 to 1.1 (daha küçük)
+      const scale = 0.6 + particle.z * 0.4; // 0.6 to 1.0 (daha küçük)
       const size = particle.size * scale;
-      const opacity = 0.6 + particle.z * 0.4; // 0.6 to 1.0 (hala parlak)
+      const opacity = 0.55 + particle.z * 0.35; // 0.55 to 0.9 (optimize edilmiş)
 
-      // Draw particle with moderate glow effect
+      // Draw particle with light glow effect
       ctx.beginPath();
       ctx.arc(drawX, drawY, size, 0, Math.PI * 2);
       
-      // Add moderate glow effect
-      ctx.shadowBlur = 12;
-      ctx.shadowColor = `rgba(59, 130, 246, ${opacity * 0.7})`;
+      // Add light glow effect
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = `rgba(59, 130, 246, ${opacity * 0.6})`;
       ctx.fillStyle = `rgba(59, 130, 246, ${opacity})`;
       ctx.fill();
       ctx.shadowBlur = 0;
@@ -185,7 +185,7 @@ export default function NeuralNetworkBackground({
           // Calculate line opacity based on distance and depth
           const distanceRatio = 1 - distance / config.connectionDistance;
           const avgZ = (particle.z + other.z) / 2;
-          const depthOpacity = 0.35 + avgZ * 0.45; // 0.35 to 0.8 (optimize edilmiş)
+          const depthOpacity = 0.3 + avgZ * 0.4; // 0.3 to 0.7 (daha az parlak)
           const lineOpacity = distanceRatio * depthOpacity;
 
           // Apply parallax to connection
@@ -197,14 +197,14 @@ export default function NeuralNetworkBackground({
           const x2 = other.x + parallaxX * depthFactor2;
           const y2 = other.y + parallaxY * depthFactor2;
 
-          // Draw connection line with moderate glow
+          // Draw connection line with light glow
           ctx.beginPath();
           ctx.moveTo(x1, y1);
           ctx.lineTo(x2, y2);
-          ctx.shadowBlur = 6;
-          ctx.shadowColor = `rgba(59, 130, 246, ${Math.min(lineOpacity * 0.5, 1)})`;
+          ctx.shadowBlur = 4;
+          ctx.shadowColor = `rgba(59, 130, 246, ${Math.min(lineOpacity * 0.4, 1)})`;
           ctx.strokeStyle = `rgba(59, 130, 246, ${Math.min(lineOpacity, 1)})`;
-          ctx.lineWidth = 1.5;
+          ctx.lineWidth = 1;
           ctx.stroke();
           ctx.shadowBlur = 0;
         }
