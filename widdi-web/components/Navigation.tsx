@@ -82,6 +82,7 @@ export default function Navigation() {
   const navItems = [
     { name: t('home'), path: `/${locale}` },
     { name: t('services'), path: `/${locale}/services` },
+    { name: t('vision'), path: `/${locale}/vision` },
     { name: t('about'), path: `/${locale}/about` },
     { name: t('contact'), path: `/${locale}/contact` },
   ];

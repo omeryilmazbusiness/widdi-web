@@ -3,6 +3,7 @@
     "home": "Home",
     "services": "Services",
     "about": "About",
+    "vision": "Vision",
     "contact": "Contact",
     "getStarted": "Get Started"
   },
@@ -414,6 +415,234 @@
       "subtitle": "Join 500+ enterprise clients who trust Widdi to power their digital transformation",
       "startJourney": "Start Your Journey",
       "exploreSolutions": "Explore Solutions"
+    }
+  },
+  "vision": {
+    "meta": {
+      "title": "Vision - AI-Powered Solutions | Widdi",
+      "description": "At Widdi, we deliver AI-powered project development and tailor-made solutions. Transform your business with AI automation, intelligent CRM, computer vision, and custom LLM integrations."
+    },
+    "hero": {
+      "badge": "Shaping the Future with AI",
+      "title": "AI-Powered Projects and Custom-Built Solutions",
+      "subtitle": "With our engineering excellence and AI expertise, we develop scalable and intelligent solutions tailored to your business's unique needs."
+    },
+    "whatWeDo": {
+      "badge": "What We Do",
+      "title": "We Specialize in AI-Powered Projects",
+      "description": "At Widdi, we integrate artificial intelligence technologies into your business processes and deliver custom, high-performance solutions. Every project is designed to meet your specific business objectives and executed with engineering excellence."
+    },
+    "principles": {
+      "badge": "Our Principles",
+      "title": "Core Working Principles",
+      "subtitle": "Fundamental values and approaches that guide every project",
+      "items": {
+        "dataFirst": {
+          "title": "Data-Driven Decisions",
+          "description": "We build solutions based on measurable metrics and real user data, not assumptions."
+        },
+        "scalable": {
+          "title": "Scalable Architecture",
+          "description": "We design flexible and robust infrastructures ready for tomorrow's growth while meeting today's needs."
+        },
+        "transparent": {
+          "title": "Transparent Processes",
+          "description": "We work with open communication, regular reporting, and full visibility at every stage."
+        },
+        "pragmatic": {
+          "title": "Pragmatic Approach",
+          "description": "We avoid unnecessary complexity and produce simple, effective solutions that work."
+        },
+        "secure": {
+          "title": "Security & Compliance",
+          "description": "Data security and legal compliance are fundamental to every project—we never compromise."
+        }
+      }
+    },
+    "solutions": {
+      "badge": "Our Solutions",
+      "title": "AI Solution Portfolio",
+      "subtitle": "Expert services across 6 core AI technology areas to transform your business",
+      "items": {
+        "automation": {
+          "title": "AI Automation & Agents",
+          "description": "Automate repetitive business processes with intelligent bots and autonomous agents to boost efficiency."
+        },
+        "crm": {
+          "title": "AI-Powered CRM / Lead Ops",
+          "description": "Optimize customer relationships and sales processes with artificial intelligence to increase conversion rates."
+        },
+        "search": {
+          "title": "Intelligent Search & RAG",
+          "description": "Get instant accurate answers from your enterprise knowledge base with Retrieval-Augmented Generation (RAG)."
+        },
+        "vision": {
+          "title": "Computer Vision & Media",
+          "description": "Make your visual content intelligent with image recognition, video analysis, and media processing."
+        },
+        "analytics": {
+          "title": "Predictive Analytics",
+          "description": "Learn from historical data to predict future trends and make strategic decisions."
+        },
+        "llm": {
+          "title": "Custom LLM Integrations",
+          "description": "Integrate large language models like GPT, Claude, and Gemini customized for your workflows."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Industry Solutions",
+      "title": "AI Applications by Industry",
+      "subtitle": "Proven success stories and use cases across different industries",
+      "items": {
+        "ecommerce": {
+          "title": "E-Commerce & Retail",
+          "description": "Boost sales with personalized shopping experiences, intelligent product recommendations, and inventory optimization.",
+          "examples": [
+            "Personalized product recommendation engines",
+            "Dynamic pricing algorithms",
+            "Visual search and virtual try-on",
+            "Chatbot customer assistant"
+          ]
+        },
+        "finance": {
+          "title": "Finance & Banking",
+          "description": "Secure financial operations with fraud detection, risk analysis, and customer segmentation.",
+          "examples": [
+            "Real-time fraud detection",
+            "Credit risk scoring",
+            "Automated document processing (OCR + NLP)",
+            "Customer churn prediction"
+          ]
+        },
+        "healthcare": {
+          "title": "Healthcare & Pharma",
+          "description": "AI-powered healthcare solutions for diagnostic support, patient tracking, and operational efficiency.",
+          "examples": [
+            "Medical image analysis",
+            "Patient triage systems",
+            "Drug interaction checking",
+            "Appointment optimization"
+          ]
+        },
+        "manufacturing": {
+          "title": "Manufacturing & Logistics",
+          "description": "Maximize production efficiency with predictive maintenance, quality control, and supply chain optimization.",
+          "examples": [
+            "Predictive maintenance systems",
+            "Visual quality control",
+            "Inventory optimization",
+            "Route planning and optimization"
+          ]
+        }
+      }
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "End-to-End AI Project Management",
+      "subtitle": "We're with you at every stage with a professional methodology",
+      "steps": {
+        "discovery": {
+          "number": "01",
+          "title": "Discovery",
+          "description": "We conduct a detailed analysis of your needs, goals, and existing systems."
+        },
+        "prototype": {
+          "number": "02",
+          "title": "Prototyping",
+          "description": "We quickly build an MVP, test the concept, and gather feedback."
+        },
+        "deploy": {
+          "number": "03",
+          "title": "Development & Deploy",
+          "description": "We go live with production-grade quality, secure and scalable infrastructure."
+        },
+        "improve": {
+          "number": "04",
+          "title": "Improvement",
+          "description": "We monitor performance and continuously optimize based on user feedback."
+        }
+      }
+    },
+    "security": {
+      "badge": "Security & Compliance",
+      "title": "Enterprise Security Standards",
+      "subtitle": "Your data is our top priority. We guarantee the highest security and privacy standards.",
+      "items": {
+        "dataPrivacy": {
+          "title": "Data Privacy",
+          "description": "Full compliance with GDPR, CCPA, and other data protection laws. Your data is encrypted and stored in secure environments."
+        },
+        "compliance": {
+          "title": "Certifications",
+          "description": "We meet international security standards with our ISO 27001 and SOC 2 Type II certifications."
+        },
+        "onPrem": {
+          "title": "On-Premise Option",
+          "description": "We offer custom deployment options that can run on your own infrastructure for sensitive data."
+        }
+      }
+    },
+    "proof": {
+      "badge": "Case Examples",
+      "title": "Real-World AI Applications",
+      "subtitle": "Successful AI project examples from various industries",
+      "items": {
+        "project1": {
+          "title": "E-Commerce Recommendation Engine",
+          "description": "AI system that increased conversion rate by 40% with machine learning-powered personalized product recommendations.",
+          "tags": ["ML", "Personalization", "E-Commerce"]
+        },
+        "project2": {
+          "title": "Enterprise Document Assistant",
+          "description": "Intelligent chatbot solution that instantly retrieves information from internal documents using RAG technology.",
+          "tags": ["RAG", "NLP", "Enterprise"]
+        },
+        "project3": {
+          "title": "Autonomous Customer Support System",
+          "description": "Automation platform that automatically resolves 70% of support requests with 24/7 AI agents.",
+          "tags": ["AI Agents", "Automation", "Support"]
+        }
+      }
+    },
+    "showcase": {
+      "badge": "Portfolio",
+      "title": "Selected Works",
+      "subtitle": "Examples from our successful projects across different sectors",
+      "items": {
+        "aitech": {
+          "title": "AI Technology Solutions",
+          "description": "We develop enterprise AI applications and intelligent automation systems."
+        },
+        "business": {
+          "title": "Business Solutions",
+          "description": "We deliver strategic business solutions that accelerate digital transformation."
+        },
+        "strategical": {
+          "title": "Strategic Consulting",
+          "description": "We guide businesses with data-driven strategies and roadmaps."
+        },
+        "studio": {
+          "title": "Creative Studio",
+          "description": "Creative design and development services for modern web and mobile applications."
+        },
+        "studio2": {
+          "title": "Production",
+          "description": "High-quality video production and visual content creation."
+        },
+        "innovation": {
+          "title": "Innovation & AR/VR",
+          "description": "Bringing the future to today with augmented reality and immersive experiences."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Let's Get Started",
+      "title": "Let's Discuss Your Custom AI Solution",
+      "subtitle": "Let's identify the most suitable AI technologies for your project and create a custom roadmap.",
+      "primaryButton": "Get Free Consultation",
+      "secondaryButton": "Request Demo",
+      "contactInfo": "Or reach out directly: enterprise@widdigroup.com"
     }
   },
   "footer": {

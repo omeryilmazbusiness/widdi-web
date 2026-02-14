@@ -3,6 +3,7 @@
       "home": "Rûpela Sereke",
       "services": "Karûbar",
       "about": "Derbarê Me",
+      "vision": "Dîtin",
       "contact": "Têkilî",
       "getStarted": "Dest Pê Bike"
     },
@@ -375,7 +376,7 @@
         "items": {
           "excellence": {
             "title": "Pêbaweriya Teknîkî",
-            "description": "Me bêdeng e ku çareseriyên nermalava standardên cîhanî yên li ser teknolojiyên herî dawî û pratîkên çêtirîn ên pîşesaziyê ava bûyî peyda bike."
+            "description": "Me bêdeng e ku çareseriyên nermalava standardên cîhanî yên li ser tehnologiyên herî dawî û pratîkên çêtirîn ên pîşesaziyê ava bûyî peyda bike."
           },
           "reliability": {
             "title": "Pêbaweriya Operasyonel",
@@ -414,6 +415,234 @@
         "subtitle": "Beşdarî 500+ xerîdarên korporatîf bibin ku ji bo xurtkirina veguherînên wan ên dîjîtal bi Widdi bawer dikin",
         "startJourney": "Rêwîtiya Xwe Dest Pê Bike",
         "exploreSolutions": "Çareseriyan Keşf Bike"
+      }
+    },
+    "vision": {
+      "meta": {
+        "title": "Dîtin - Çareseriyên bi Zîrekiya Destikî | Widdi",
+        "description": "Li Widdi, em pêşkeftina projeyên bi zîrekiya destikî û çareseriyên taybet peyda dikin. Karsaziya xwe bi otomasyona AI, CRM a zîrek, dîtina kompîturê û întegrasyonên LLM ên taybet veguherînin."
+      },
+      "hero": {
+        "badge": "Em bi AI Pêşerojê Çêdikin",
+        "title": "Projeyên bi Zîrekiya Destikî û Çareseriyên Taybet",
+        "subtitle": "Bi hêza me ya endezyariyê û pisporbûna me ya AI, em çareseriyên skalable û zîrek ên ji bo hewcedariyên yekta yên karsaziya we pêşve dibin."
+      },
+      "whatWeDo": {
+        "badge": "Em Çi Dikin",
+        "title": "Em di Projeyên bi Zîrekiya Destikî de Pisporên",
+        "description": "Li Widdi, em tehnologiyên zîrekiya destikî di pêvajoyên karsaziya we de kom dikin û çareseriyên taybet ên performansa bilind peyda dikin. Her proje ji bo armancên taybetî yên karsaziya we hatî sêwirin û bi pêbaweriya endezyariyê tê bicîhkirin."
+      },
+      "principles": {
+        "badge": "Prensîbên Me",
+        "title": "Prensîbên Xebata Bingehîn",
+        "subtitle": "Nirx û nêzîkatiyên bingehîn ku her projeyê rêber dikin",
+        "items": {
+          "dataFirst": {
+            "title": "Biryarên Li Ser Daneyan Bingehîn",
+            "description": "Em çareseriyên li ser pîvanên pîvanbar û daneyên bikarhêner ên rastîn, ne li ser texmînan ava dikin."
+          },
+          "scalable": {
+            "title": "Mîmariya Skalable",
+            "description": "Em bingeh ên nermbûn û xurt ên ji bo mezinbûna sibê amade û hewcedariyên îro bicîh tînin sêwir dikin."
+          },
+          "transparent": {
+            "title": "Pêvajoyên Zelal",
+            "description": "Em bi ragihandinên vekirî, ragihandinên birêkûpêk û dîtbariya tevahî di her qonaxê de dixebitin."
+          },
+          "pragmatic": {
+            "title": "Nêzîkatiya Pragmatîk",
+            "description": "Em ji tevliheviya pêwîst dûr dimînin û çareseriyên hêsan û bandordar ên ku dixebitin hilberînin."
+          },
+          "secure": {
+            "title": "Ewlehî û Lihevhatî",
+            "description": "Ewlehiya daneyan û lihevhatiya yasayî ji bo her projeyê bingehîn e - em tu carî nayêrin."
+          }
+        }
+      },
+      "solutions": {
+        "badge": "Çareseriyên Me",
+        "title": "Portfoya Çareseriyên AI",
+        "subtitle": "Karûbarên pisporî li 6 qadên teknolojiya bingehîn a AI ji bo veguherandina karsaziya we",
+        "items": {
+          "automation": {
+            "title": "Otomasyona AI û Wekîl",
+            "description": "Pêvajoyên karsaziyê yên dubare bi bot û wekîlên otonom ên zîrek otomatîk bikin da ku karbidestiyê zêde bikin."
+          },
+          "crm": {
+            "title": "CRM / Lead Ops bi Zîrekiya Destikî",
+            "description": "Pêwendiyên xerîdar û pêvajoyên firotanê bi zîrekiya destikî optimize bikin da ku rêjeyên veguherînê zêde bikin."
+          },
+          "search": {
+            "title": "Lêgerîna Zîrek û RAG",
+            "description": "Bi Retrieval-Augmented Generation (RAG) bersivên rast ên demdemî ji bingeha zanînê ya karsaziya xwe bistînin."
+          },
+          "vision": {
+            "title": "Dîtina Kompîturê û Medya",
+            "description": "Naverokên xwe yên dîtbar bi naskirina wêne, analîza vîdyoyê û pêvajoya medyayê zîrek bikin."
+          },
+          "analytics": {
+            "title": "Analîtîka Pêşbînîkirî",
+            "description": "Ji daneyên dîrokî hîn bibin da ku meylên pêşerojê pêşbînî bikin û biryarên stratejîk bidin."
+          },
+          "llm": {
+            "title": "Întegrasyonên LLM ên Taybet",
+            "description": "Modelên zimanê mezin ên wekî GPT, Claude û Gemini ji bo karanîna we taybet kom bikin."
+          }
+        }
+      },
+      "useCases": {
+        "badge": "Çareseriyên Pîşesaziyê",
+        "title": "Sepanên AI li Gorî Pîşesaziyê",
+        "subtitle": "Çîrokên serkeftinê yên selmandî û rewşên bikaranîna li pîşesaziyên cûda",
+        "items": {
+          "ecommerce": {
+            "title": "E-Bazirganî û Firotin",
+            "description": "Bi ceribandinên kirînê yên kesane, pêşniyarên hilberên zîrek û optimîzasyona stokê firotinê zêde bikin.",
+            "examples": [
+              "Motorên pêşniyara hilberên kesane",
+              "Algorîtmayên bihayê yên dînamîk",
+              "Lêgerîna dîtbar û ceribandinên virtual",
+              "Alîkara xerîdar a chatbot"
+            ]
+          },
+          "finance": {
+            "title": "Darayî û Bankayî",
+            "description": "Operasyonên darayî bi naskirina saxtekaran, analîza rîskê û dabeşkirina xerîdaran ewle bikin.",
+            "examples": [
+              "Naskirina saxtekaran a demê rastîn",
+              "Hejmara rîska kredîyê",
+              "Pêvajokirina belgeyên otomatîk (OCR + NLP)",
+              "Pêşbînkirina wenda xerîdaran"
+            ]
+          },
+          "healthcare": {
+            "title": "Tenduristî û Dermansazî",
+            "description": "Çareseriyên tenduristiyê yên bi AI ji bo piştgiriya teşhîsê, şopandina nexweşan û karbidestiya operasyonel.",
+            "examples": [
+              "Analîza wêneyan a tîbbî",
+              "Pergalên rêzkirin a nexweşan",
+              "Kontrolkirina têkiliyên derma",
+              "Optimîzasyona radeyan"
+            ]
+          },
+          "manufacturing": {
+            "title": "Hilberîn û Lojîstîk",
+            "description": "Karbidestiya hilberînê bi lêçûna pêşbînîkirî, kontrolkirina kalîteyê û optimîzasyona zincîreya pêdiviyê mezin bikin.",
+            "examples": [
+              "Pergalên lêçûna pêşbînîkirî",
+              "Kontrolkirina kalîteya dîtbar",
+              "Optimîzasyona stokê",
+              "Plankirina rêyê û optimîzasyon"
+            ]
+          }
+        }
+      },
+      "process": {
+        "badge": "Pêvajoya Me",
+        "title": "Rêvebiriya Projeya AI ya Tevahî",
+        "subtitle": "Em bi metodolojiyeke profesyonel di her qonaxê de bi we re ne",
+        "steps": {
+          "discovery": {
+            "number": "01",
+            "title": "Keşfkirin",
+            "description": "Em analîzeke hûrgulî ya hewcedariyên we, armancên we û pergalên heyî dikin."
+          },
+          "prototype": {
+            "number": "02",
+            "title": "Prototîpkirin",
+            "description": "Em bi lez MVP çêdikin, konseptê ceribandin û raybaran kom dikin."
+          },
+          "deploy": {
+            "number": "03",
+            "title": "Pêşkeftin û Bicîhkirin",
+            "description": "Em bi kalîteya asta hilberînê, bingeha ewle û skalable zindî dibin."
+          },
+          "improve": {
+            "number": "04",
+            "title": "Baştirkirin",
+            "description": "Em performansê şopînin û li gorî raybaran a bikarhêner domdar optimize dikin."
+          }
+        }
+      },
+      "security": {
+        "badge": "Ewlehî û Lihevhatî",
+        "title": "Standardên Ewlehiya Korporatîf",
+        "subtitle": "Daneyên we prioriteya me ya herî bilind e. Em standardên herî bilind ên ewlehiyê û taybetiyê garantî dikin.",
+        "items": {
+          "dataPrivacy": {
+            "title": "Taybetiya Daneyan",
+            "description": "Lihevhatina tevahî bi GDPR, CCPA û yasayên parastina daneyan ên din. Daneyên we têne şîfrekkirin û di jîngehên ewle de têne hilanîn."
+          },
+          "compliance": {
+            "title": "Sertîfîka",
+            "description": "Em bi sertîfîkayên xwe yên ISO 27001 û SOC 2 Type II standardên ewlehiya navneteweyî bi cih tînin."
+          },
+          "onPrem": {
+            "title": "Vebijarka Li Cîh",
+            "description": "Em ji bo daneyên hestiyar vebijarkên bicîhkirinê yên taybet pêşkêş dikin ku dikarin li ser bingeh a we ya xwe bixebitin."
+          }
+        }
+      },
+      "proof": {
+        "badge": "Mînakên Rewşê",
+        "title": "Sepanên AI yên Cîhana Rastîn",
+        "subtitle": "Mînakên projeyên AI yên serkeftî ji pîşesaziyên cûda",
+        "items": {
+          "project1": {
+            "title": "Motora Pêşniyarên E-Bazirganiyê",
+            "description": "Pergala AI ku rêjeya veguherînê bi %40 zêde kir bi pêşniyarên hilberên kesane yên bi hînkirina makîneyê ve.",
+            "tags": ["ML", "Kesanekirin", "E-Bazirganî"]
+          },
+          "project2": {
+            "title": "Alîkara Belgeyên Korporatîf",
+            "description": "Çareseriya chatbot a zîrek ku bi teknolojiya RAG agahdariyên ji belgeyan ên hundir bi lez vedixwe.",
+            "tags": ["RAG", "NLP", "Korporatîf"]
+          },
+          "project3": {
+            "title": "Pergala Piştgiriya Xerîdar a Otonom",
+            "description": "Platforma otomasyonê ku bi wekîlên AI yên 7/24 %70 ji daxwazên piştgiriyê otomatîk çareser dike.",
+            "tags": ["Wekîlên AI", "Otomasyonê", "Piştgirî"]
+          }
+        }
+      },
+      "showcase": {
+        "badge": "Portfo",
+        "title": "Xebatên Hilbijartî",
+        "subtitle": "Mînak ji projeyên me yên serkeftî li sektarên cûda",
+        "items": {
+          "aitech": {
+            "title": "Çareseriyên Teknolojiya AI",
+            "description": "Em sepanên AI yên korporatîf û pergalên otomasyona zîrek pêşve dibin."
+          },
+          "business": {
+            "title": "Çareseriyên Karsaziyê",
+            "description": "Em çareseriyên stratejîk ên karsaziyê ku veguherîna dîjîtal bilez dike peyda dikin."
+          },
+          "strategical": {
+            "title": "Şêwirmendiya Stratejîk",
+            "description": "Em karsaziyan bi stratejî û nexşeyên rêyê yên li ser daneyan rêber dikin."
+          },
+          "studio": {
+            "title": "Stûdyoya Dahîner",
+            "description": "Karûbarên sêwirandina dahîner û pêşkeftinê ji bo sepanên malper û mobîl ên modern."
+          },
+          "studio2": {
+            "title": "Hilberîn",
+            "description": "Hilberîna vîdyoyê ya kalîteya bilind û çêkirina naverokê yên dîtbar."
+          },
+          "innovation": {
+            "title": "Înovasyon û AR/VR",
+            "description": "Bi rastiya zêdekirî û ceribandinên beşdarî pêşerojê bi îro tînin."
+          }
+        }
+      },
+      "cta": {
+        "badge": "Ka Dest Pê Bikin",
+        "title": "Ka Çareseriya AI ya Taybet a We Nîqaş Bikin",
+        "subtitle": "Ka teknolojiyên AI yên herî guncan ji bo projeya we nas bikin û nexşeyek taybet derxînin.",
+        "primaryButton": "Şêwirmendiya Belaş Bistînin",
+        "secondaryButton": "Demoyê Daxwaz Bike",
+        "contactInfo": "An rasterast bigihînin: enterprise@widdigroup.com"
       }
     },
     "footer": {

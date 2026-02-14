@@ -3,6 +3,7 @@
     "home": "Ana Sayfa",
     "services": "Hizmetler",
     "about": "Hakkımızda",
+    "vision": "Vizyon",
     "contact": "İletişim",
     "getStarted": "Başlayın"
   },
@@ -414,6 +415,234 @@
       "subtitle": "Dijital dönüşümlerini güçlendirmek için Widdi'ye güvenen 500+ kurumsal müşteriye katılın",
       "startJourney": "Yolculuğunuza Başlayın",
       "exploreSolutions": "Çözümleri Keşfedin"
+    }
+  },
+  "vision": {
+    "meta": {
+      "title": "Vizyon - AI Destekli Çözümler | Widdi",
+      "description": "Widdi olarak yapay zeka destekli proje geliştirme ve ihtiyaca özel çözümler sunuyoruz. AI otomasyon, akıllı CRM, bilgisayarlı görü ve özel LLM entegrasyonları ile işinizi dönüştürün."
+    },
+    "hero": {
+      "badge": "AI ile Geleceği Şekillendiriyoruz",
+      "title": "Yapay Zeka Destekli Projeler ve İhtiyaca Özel Çözümler",
+      "subtitle": "Mühendislik gücümüz ve AI uzmanlığımızla, işletmenizin benzersiz ihtiyaçlarına özel, ölçeklenebilir ve akıllı çözümler geliştiriyoruz."
+    },
+    "whatWeDo": {
+      "badge": "Ne Yapıyoruz",
+      "title": "AI Destekli Projelerde Uzmanız",
+      "description": "Widdi olarak, yapay zeka teknolojilerini iş süreçlerinize entegre ediyor ve size özel, yüksek performanslı çözümler sunuyoruz. Her proje, işletmenizin spesifik hedeflerine göre tasarlanır ve mükemmel bir mühendislik anlayışıyla hayata geçirilir."
+    },
+    "principles": {
+      "badge": "Prensiplerimi",
+      "title": "Çalışma Prensiple imiz",
+      "subtitle": "Her projede rehberimiz olan temel değerler ve yaklaşımlar",
+      "items": {
+        "dataFirst": {
+          "title": "Veri Odaklı Kararlar",
+          "description": "Varsayımlara değil, ölçülebilir metriklere ve gerçek kullanıcı verilerine dayanan çözümler geliştiriyoruz."
+        },
+        "scalable": {
+          "title": "Ölçeklenebilir Mimari",
+          "description": "Bugünkü ihtiyaçlarınızı karşılarken, yarının büyümesine hazır esnek ve güçlü altyapılar tasarlıyoruz."
+        },
+        "transparent": {
+          "title": "Şeffaf Süreçler",
+          "description": "Her aşamada açık iletişim, düzenli raporlama ve tam görünürlük ile çalışıyoruz."
+        },
+        "pragmatic": {
+          "title": "Pragmatik Yaklaşım",
+          "description": "Gereksiz karmaşıklıktan kaçınıyor, işe yarayan basit ve etkili çözümler üretiyoruz."
+        },
+        "secure": {
+          "title": "Güvenlik & Uyumluluk",
+          "description": "Veri güvenliği ve yasal uyumluluk her projenin temelinde yer alır, asla ödün vermeyiz."
+        }
+      }
+    },
+    "solutions": {
+      "badge": "Çözümlerimiz",
+      "title": "AI Çözüm Portföyümüz",
+      "subtitle": "İşinizi dönüştürecek 6 temel AI teknolojisi alanında uzman hizmet sunuyoruz",
+      "items": {
+        "automation": {
+          "title": "AI Otomasyon & Ajanlar",
+          "description": "Akıllı botlar ve otonom ajanlarla tekrarlayan iş süreçlerinizi otomatikleştirin, verimliliği artırın."
+        },
+        "crm": {
+          "title": "AI Destekli CRM / Lead Ops",
+          "description": "Müşteri ilişkilerinizi ve satış süreçlerinizi yapay zeka ile optimize edin, dönüşüm oranlarını yükseltin."
+        },
+        "search": {
+          "title": "Akıllı Arama & RAG",
+          "description": "Retrieval-Augmented Generation (RAG) ile kurumsal bilgi tabanınızdan anında doğru cevaplar alın."
+        },
+        "vision": {
+          "title": "Bilgisayarlı Görü & Medya",
+          "description": "Görüntü tanıma, video analizi ve medya işleme ile görsel içeriklerinizi akıllı hale getirin."
+        },
+        "analytics": {
+          "title": "Tahmine Dayalı Analitik",
+          "description": "Geçmiş verilerinizden öğrenerek gelecekteki trendleri tahmin edin, stratejik kararlar alın."
+        },
+        "llm": {
+          "title": "Özel LLM Entegrasyonları",
+          "description": "GPT, Claude, Gemini gibi büyük dil modellerini iş akışlarınıza özel olarak entegre edin."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Sektörel Çözümler",
+      "title": "Sektörlere Özel AI Uygulamaları",
+      "subtitle": "Farklı endüstrilerde kanıtlanmış başarı hikayeleri ve kullanım senaryoları",
+      "items": {
+        "ecommerce": {
+          "title": "E-Ticaret & Perakende",
+          "description": "Kişiselleştirilmiş alışveriş deneyimleri, akıllı ürün önerileri ve stok optimizasyonu ile satışlarınızı artırın.",
+          "examples": [
+            "Kişiselleştirilmiş ürün önerisi motorları",
+            "Dinamik fiyatlandırma algoritmaları",
+            "Görsel arama ve sanal deneme",
+            "Chatbot müşteri asistanı"
+          ]
+        },
+        "finance": {
+          "title": "Finans & Bankacılık",
+          "description": "Dolandırıcılık tespiti, risk analizi ve müşteri segmentasyonu ile finansal operasyonlarınızı güvence altına alın.",
+          "examples": [
+            "Gerçek zamanlı dolandırıcılık tespiti",
+            "Kredi risk skorlaması",
+            "Otomatik belge işleme (OCR + NLP)",
+            "Müşteri churn tahmini"
+          ]
+        },
+        "healthcare": {
+          "title": "Sağlık & İlaç",
+          "description": "Tanı desteği, hasta takibi ve operasyonel verimlilik için AI destekli sağlık çözümleri sunuyoruz.",
+          "examples": [
+            "Tıbbi görüntü analizi",
+            "Hasta yönlendirme sistemleri",
+            "İlaç etkileşimi kontrolü",
+            "Randevu optimizasyonu"
+          ]
+        },
+        "manufacturing": {
+          "title": "Üretim & Lojistik",
+          "description": "Tahmine dayalı bakım, kalite kontrol ve tedarik zinciri optimizasyonu ile üretim verimliliğini maksimize edin.",
+          "examples": [
+            "Tahmine dayalı bakım sistemleri",
+            "Görsel kalite kontrol",
+            "Envanter optimizasyonu",
+            "Rota planlama ve optimizasyon"
+          ]
+        }
+      }
+    },
+    "process": {
+      "badge": "Çalışma Sürecimiz",
+      "title": "Baştan Sona AI Proje Yönetimi",
+      "subtitle": "Profesyonel bir metodoloji ile her aşamada yanınızdayız",
+      "steps": {
+        "discovery": {
+          "number": "01",
+          "title": "Keşif",
+          "description": "İhtiyaçlarınızı, hedeflerinizi ve mevcut sistemlerinizi detaylı analiz ediyoruz."
+        },
+        "prototype": {
+          "number": "02",
+          "title": "Prototipleme",
+          "description": "Hızlı bir şekilde MVP oluşturup, konsepti test ediyoruz ve geri bildirim alıyoruz."
+        },
+        "deploy": {
+          "number": "03",
+          "title": "Geliştirme & Yayın",
+          "description": "Ürün kalitesinde, güvenli ve ölçeklenebilir altyapıyla canlıya alıyoruz."
+        },
+        "improve": {
+          "number": "04",
+          "title": "İyileştirme",
+          "description": "Performansı izliyor, kullanıcı geri bildirimlerine göre sürekli optimize ediyoruz."
+        }
+      }
+    },
+    "security": {
+      "badge": "Güvenlik & Uyumluluk",
+      "title": "Kurumsal Güvenlik Standartları",
+      "subtitle": "Verileriniz bizim için en önemli öncelik. En yüksek güvenlik ve gizlilik standartlarını garanti ediyoruz.",
+      "items": {
+        "dataPrivacy": {
+          "title": "Veri Gizliliği",
+          "description": "GDPR, KVKK ve diğer veri koruma yasalarına tam uyumluluk. Verileriniz şifrelenir ve güvenli ortamlarda saklanır."
+        },
+        "compliance": {
+          "title": "Sertifikasyonlar",
+          "description": "ISO 27001, SOC 2 Type II sertifikalarımız ile uluslararası güvenlik standartlarını karşılıyoruz."
+        },
+        "onPrem": {
+          "title": "On-Premise Seçeneği",
+          "description": "Hassas verileriniz için kendi altyapınızda çalışabilen özel deployment seçenekleri sunuyoruz."
+        }
+      }
+    },
+    "proof": {
+      "badge": "Örnek Projeler",
+      "title": "Gerçek Dünyadan AI Uygulamaları",
+      "subtitle": "Farklı sektörlerden başarılı AI proje örnekleri",
+      "items": {
+        "project1": {
+          "title": "E-Ticaret Öneri Motoru",
+          "description": "Makine öğrenmesi ile kişiselleştirilmiş ürün önerileri sunarak dönüşüm oranını %40 artıran AI sistemi.",
+          "tags": ["ML", "Kişiselleştirme", "E-Ticaret"]
+        },
+        "project2": {
+          "title": "Kurumsal Doküman Asistanı",
+          "description": "RAG teknolojisi ile şirket içi dokümanlardan anında bilgi çeken akıllı chatbot çözümü.",
+          "tags": ["RAG", "NLP", "Enterprise"]
+        },
+        "project3": {
+          "title": "Otonom Müşteri Destek Sistemi",
+          "description": "7/24 çalışan AI ajanlarla destek taleplerinin %70'ini otomatik çözen otomasyon platformu.",
+          "tags": ["AI Agents", "Automation", "Support"]
+        }
+      }
+    },
+    "showcase": {
+      "badge": "Portfolyo",
+      "title": "Seçilmiş Çalışmalar",
+      "subtitle": "Farklı sektörlerden başarılı projelerimizden örnekler",
+      "items": {
+        "aitech": {
+          "title": "AI Teknoloji Çözümleri",
+          "description": "Kurumsal AI uygulamaları ve akıllı otomasyon sistemleri geliştiriyoruz."
+        },
+        "business": {
+          "title": "İş Çözümleri",
+          "description": "Şirketlerin dijital dönüşümünü hızlandıran stratejik iş çözümleri sunuyoruz."
+        },
+        "strategical": {
+          "title": "Stratejik Danışmanlık",
+          "description": "Veri odaklı stratejiler ve yol haritaları ile işletmelere rehberlik ediyoruz."
+        },
+        "studio": {
+          "title": "Kreatif Stüdyo",
+          "description": "Modern web ve mobil uygulamalar için yaratıcı tasarım ve geliştirme hizmetleri."
+        },
+        "studio2": {
+          "title": "Prodüksiyon",
+          "description": "Yüksek kaliteli video prodüksiyonu ve görsel içerik üretimi yapıyoruz."
+        },
+        "innovation": {
+          "title": "İnovasyon & AR/VR",
+          "description": "Artırılmış gerçeklik ve immersive deneyimlerle geleceği bugüne taşıyoruz."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Hadi Başlayalım",
+      "title": "İhtiyacınıza Özel AI Çözümü Konuşalım",
+      "subtitle": "Projeniz için en uygun AI teknolojilerini belirleyelim ve size özel bir yol haritası çıkaralım.",
+      "primaryButton": "Ücretsiz Danışmanlık Alın",
+      "secondaryButton": "Demo Talep Edin",
+      "contactInfo": "Ya da doğrudan ulaşın: enterprise@widdigroup.com"
     }
   },
   "footer": {

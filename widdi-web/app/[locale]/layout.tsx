@@ -18,12 +18,14 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
   display: "swap",
+  fallback: ["system-ui", "arial"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
+  fallback: ["monospace"],
 });
 
 // Arabic font - Cairo is more reliable than Noto Sans Arabic
@@ -32,6 +34,7 @@ const cairoFont = Cairo({
   subsets: ["arabic", "latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
 // Extract viewport configuration
